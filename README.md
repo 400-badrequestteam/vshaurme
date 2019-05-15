@@ -41,12 +41,12 @@ $ flask run
 Сайт будет доступен по адресу `http://127.0.0.1:5000/`.
 
 
-## Как запустить на Repl.it
+## Как задеплоить изменения на хостинг на Repl.it
 
-1. Зарегистрироваться на [Repl.it](https://repl.it)
-2. Создать новый repl, импортировать репозиторий [https://github.com/devmanorg/vshaurme](https://github.com/devmanorg/vshaurme)
+1. Залогиниться на [pythonanywhere.com](https://www.pythonanywhere.com) под пользователем `400badrequestteam`
+2. Перейти во вкладку `consoles` -> `Your consoles` и кликнуть на экземпляр консоли
 
-    ![](https://user-images.githubusercontent.com/13587415/57639674-2021db00-75b9-11e9-9ca8-6dafefca9ce2.png)
+
 
 3. Нажать «Run»
 
