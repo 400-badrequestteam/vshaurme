@@ -79,9 +79,9 @@ $ flask run
 
 ## Как откатить неудачные обновления
 - В первую очередь проверяем и анализируем логи сервера на предмет ошибок:  
-  [Access log](400badrequestteam.pythonanywhere.com.access.log)  
-  [Error log](400badrequestteam.pythonanywhere.com.error.log)  
-  [Server log](400badrequestteam.pythonanywhere.com.server.log)
+  [Access log](https://www.pythonanywhere.com/user/400badrequestteam/files/var/log/400badrequestteam.pythonanywhere.com.access.log)  
+  [Error log](https://www.pythonanywhere.com/user/400badrequestteam/files/var/log/400badrequestteam.pythonanywhere.com.error.log)  
+  [Server log](https://www.pythonanywhere.com/user/400badrequestteam/files/var/log/400badrequestteam.pythonanywhere.com.server.log)
   
 - Переходим во вкладку `consoles` -> `Your consoles` и кликаем на экземпляр консоли
 - Переходим в директорию проекта:  
