@@ -33,4 +33,5 @@ def init_rollbar():
 db.create_all(app=app)
 
 if __name__ == '__main__':
-    app.run(debug = False, use_reloader = True)
+    #app.run(debug = False, use_reloader = True)
+    app.run()
