@@ -9,15 +9,15 @@ from sqlalchemy.exc import IntegrityError
 from vshaurme.extensions import db
 from vshaurme.models import User, Photo, Tag, Comment, Notification
 
-fake = Faker()
+fake = Faker("ru_RU")
 
 
 def fake_admin():
-    admin = User(name='Grey Li',
-                 username='greyli',
-                 email='admin@helloflask.com',
+    admin = User(name=fake.name(),
+                 username=fake.user_name(),
+                 email="{}-{}".format('admin',fake.email()),
                  bio=fake.sentence(),
-                 website='http://greyli.com',
+                 website=fake.uri(),
                  confirmed=True)
     admin.set_password('helloflask')
     notification = Notification(message='Hello, welcome to Vshaurme.', receiver=admin)
@@ -28,13 +28,13 @@ def fake_admin():
 
 def fake_user(count=10):
     for user_number in range(count):
-        user = User(name='Grey Li',
+        user = User(name=fake.name(),
                     confirmed=True,
-                    username='greyli{0}'.format(user_number),
-                    bio='My name is Grey Li.',
-                    location='Longon',
-                    website='http://greyli.com',
-                    email='admin{0}@helloflask.com'.format(user_number))
+                    username=fake.user_name(),
+                    bio=fake.sentence(),
+                    location=fake.city(),
+                    website=fake.uri(),
+                  )
         user.set_password('123456')
         db.session.add(user)
         try:
@@ -52,7 +52,7 @@ def fake_follow(count=30):
 
 def fake_tag(count=20):
     for tag_number in range(count):
-        tag = Tag(name='my_tag{0}'.format(tag_number))
+        tag = Tag(name=fake.word())
         db.session.add(tag)
         try:
             db.session.commit()
@@ -63,10 +63,42 @@ def fake_tag(count=20):
 def fake_photo(count=30):
     # photos
     upload_path = current_app.config['VSHAURME_UPLOAD_PATH']
+    colors = ["#ff80ed",
+          "#065535",
+          "#133337",
+          "#000000",
+          "#ffc0cb",
+          "#ffffff",
+          "#ffe4e1",
+          "#008080",
+          "#ff0000",
+          "#ffd700",
+          "#40e0d0",
+          "#00ffff",
+          "#e6e6fa",
+          "#ff7373",
+          "#666666",
+          "#d3ffce",
+          "#ffa500",
+          "#f0f8ff",
+          "#0000ff",
+          "#b0e0e6",
+          "#c6e2ff",
+          "#faebd7",
+          "#7fffd4",
+          "#fa8072",
+          "#eeeeee",
+          "#cccccc",
+          "#003366",
+          "#800000",
+          "#ffb6c1",
+          "#800080"]
     for photo_number in range(count):
         filename = 'random_%d.jpg' % photo_number
-        # TODO: generate image
-
+        file_path = os.path.join(upload_path, filename)
+        img = Image.new("RGB", (240, 240), random.choice(colors))
+        img.save(file_path)
+        # img_small, img_large = 
         photo = Photo(
             description=fake.text(),
             filename=filename,
