@@ -147,9 +147,7 @@ def crop_avatar():
         y = form.y.data
         w = form.w.data
         h = form.h.data
-        # TODO: crop avatar
         save_user_avatars(current_user, x, y, w, h)
-        db.session.commit()
         flash('Avatar updated.', 'success')
     flash_errors(form)
     return redirect(url_for('.change_avatar'))
@@ -163,6 +161,7 @@ def save_user_avatars(user, x, y, width, height):
     user.avatar_s = filenames[0]
     user.avatar_m = filenames[1]
     user.avatar_l = filenames[2]
+    db.session.commit()
 
 def crop_image(source_image_name, width, height):
     '''использутется для нарезки аватарок при генерации пользователей'''
