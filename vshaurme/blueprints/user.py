@@ -11,8 +11,9 @@ from vshaurme.notifications import push_follow_notification
 from vshaurme.settings import Operations
 from vshaurme.utils import generate_token, validate_token, redirect_back, flash_errors
 
-user_bp = Blueprint('user', __name__)
+from flask_avatars import Avatars
 
+user_bp = Blueprint('user', __name__)
 
 @user_bp.route('/<username>')
 def index(username):
@@ -146,12 +147,26 @@ def crop_avatar():
         y = form.y.data
         w = form.w.data
         h = form.h.data
-        # TODO: crop avatar
-        db.session.commit()
+        save_user_avatars(current_user, x, y, w, h)
         flash('Avatar updated.', 'success')
     flash_errors(form)
     return redirect(url_for('.change_avatar'))
 
+def crop_avatars(source_name, x, y, width, height):
+    filenames = avatars.crop_avatar(source_name, x, y, width, height)
+    return filenames
+
+def save_user_avatars(user, x, y, width, height):
+    filenames = crop_avatars(user.avatar_raw, x, y, width, height)
+    user.avatar_s = filenames[0]
+    user.avatar_m = filenames[1]
+    user.avatar_l = filenames[2]
+    db.session.commit()
+
+def crop_image(source_image_name, width, height):
+    '''использутется для нарезки аватарок при генерации пользователей'''
+    filenames = avatars.crop_avatar(user.avatar_raw, 0, 0, width, height)
+    return filenames
 
 @user_bp.route('/settings/change-password', methods=['GET', 'POST'])
 @fresh_login_required
