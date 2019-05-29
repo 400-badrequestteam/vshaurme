@@ -3,6 +3,7 @@ from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms import ValidationError
 from wtforms.validators import DataRequired, Length, Email, EqualTo, Regexp
 from vshaurme.vshaurme_validators.validate_password import is_password_valid
+from vshaurme.vshaurme_validators.validate_username import is_username_valid
 
 from vshaurme.models import User
 
@@ -17,9 +18,10 @@ class LoginForm(FlaskForm):
 class RegisterForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired(), Length(1, 30)])
     email = StringField('Email', validators=[DataRequired(), Length(1, 254), Email()])
-    username = StringField('Username', validators=[DataRequired(), Length(1, 20),
+    username = StringField('Username', validators=[DataRequired(), is_username_valid, Length(1, 20),
                                                    Regexp('^[a-zA-Z0-9]*$',
-                                                          message='The username should contain only a-z, A-Z and 0-9.')])
+                                                          message='The username should contain only a-z, A-Z and 0-9.'),
+                                                          ])
     password = PasswordField('Password', validators=[
         DataRequired(), is_password_valid, EqualTo('password2')])
     password2 = PasswordField('Confirm password', validators=[DataRequired()])
@@ -30,8 +32,6 @@ class RegisterForm(FlaskForm):
             raise ValidationError('The email is already in use.')
 
     def validate_username(self, field):
-        bad_username_message = """Недопустимо использовать матерные слова.\n
-                                  Пожалуйста, не надо так!"""
         if User.query.filter_by(username=field.data).first():
             raise ValidationError('The username is already in use.')
 
