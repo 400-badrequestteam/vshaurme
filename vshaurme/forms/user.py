@@ -3,6 +3,7 @@ from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, HiddenField, ValidationError
 from wtforms.validators import DataRequired, Length, Email, EqualTo, Optional, Regexp
+from vshaurme.vshaurme_validators.validate_password import is_password_valid
 
 from vshaurme.models import User
 
@@ -50,9 +51,17 @@ class ChangeEmailForm(FlaskForm):
 class ChangePasswordForm(FlaskForm):
     old_password = PasswordField('Old Password', validators=[DataRequired()])
     password = PasswordField('New Password', validators=[
-        DataRequired(), Length(8, 128), EqualTo('password2')])
+        DataRequired(), EqualTo('password2')])
     password2 = PasswordField('Confirm Password', validators=[DataRequired()])
     submit = SubmitField()
+
+    def validate_password(self, field):
+        bad_password_message = """Пароль должен:\n
+                              быть больше 10 символов,\n
+                              содержать буквы и цифры,\n
+                              содержать буквы разного регистра.\n"""
+        if not is_password_valid(field.data):
+            raise ValidationError(bad_password_message)
 
 
 class NotificationSettingForm(FlaskForm):

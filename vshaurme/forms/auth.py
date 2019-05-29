@@ -2,6 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms import ValidationError
 from wtforms.validators import DataRequired, Length, Email, EqualTo, Regexp
+from vshaurme.vshaurme_validators.validate_password import is_password_valid
 
 from vshaurme.models import User
 
@@ -20,7 +21,7 @@ class RegisterForm(FlaskForm):
                                                    Regexp('^[a-zA-Z0-9]*$',
                                                           message='The username should contain only a-z, A-Z and 0-9.')])
     password = PasswordField('Password', validators=[
-        DataRequired(), Length(8, 128), EqualTo('password2')])
+        DataRequired(), EqualTo('password2')])
     password2 = PasswordField('Confirm password', validators=[DataRequired()])
     submit = SubmitField()
 
@@ -31,6 +32,14 @@ class RegisterForm(FlaskForm):
     def validate_username(self, field):
         if User.query.filter_by(username=field.data).first():
             raise ValidationError('The username is already in use.')
+    
+    def validate_password(self, field):
+        bad_password_message = """Пароль должен:\n
+                              быть больше 10 символов,\n
+                              содержать буквы и цифры,\n
+                              содержать буквы разного регистра.\n"""
+        if not is_password_valid(field.data):
+            raise ValidationError(bad_password_message)
 
 
 class ForgetPasswordForm(FlaskForm):
@@ -41,6 +50,14 @@ class ForgetPasswordForm(FlaskForm):
 class ResetPasswordForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length(1, 254), Email()])
     password = PasswordField('Password', validators=[
-        DataRequired(), Length(8, 128), EqualTo('password2')])
+        DataRequired(), EqualTo('password2')])
     password2 = PasswordField('Confirm password', validators=[DataRequired()])
     submit = SubmitField()
+    
+    def validate_password(self, field):
+        bad_password_message = """Пароль должен:\n
+                              быть больше 10 символов,\n
+                              содержать буквы и цифры,\n
+                              содержать буквы разного регистра.\n"""
+        if not is_password_valid(field.data):
+            raise ValidationError(bad_password_message)
