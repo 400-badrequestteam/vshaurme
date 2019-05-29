@@ -15,10 +15,11 @@ fake = Faker("ru_RU")
 def fake_admin():
     admin = User(name=fake.name(),
                  username=fake.user_name(),
-                 email="{}-{}".format('admin',fake.email()),
+                 email="{}-{}@yandex.ru".format('admin','badrequestteam'),
                  bio=fake.sentence(),
                  website=fake.uri(),
-                 confirmed=True)
+                 confirmed=True,
+                 role_id=4)
     admin.set_password('helloflask')
     notification = Notification(message='Hello, welcome to Vshaurme.', receiver=admin)
     db.session.add(notification)
