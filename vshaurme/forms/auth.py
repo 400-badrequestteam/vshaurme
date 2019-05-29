@@ -21,7 +21,7 @@ class RegisterForm(FlaskForm):
                                                    Regexp('^[a-zA-Z0-9]*$',
                                                           message='The username should contain only a-z, A-Z and 0-9.')])
     password = PasswordField('Password', validators=[
-        DataRequired(), EqualTo('password2')])
+        DataRequired(), is_password_valid, EqualTo('password2')])
     password2 = PasswordField('Confirm password', validators=[DataRequired()])
     submit = SubmitField()
 
@@ -30,16 +30,10 @@ class RegisterForm(FlaskForm):
             raise ValidationError('The email is already in use.')
 
     def validate_username(self, field):
+        bad_username_message = """Недопустимо использовать матерные слова.\n
+                                  Пожалуйста, не надо так!"""
         if User.query.filter_by(username=field.data).first():
             raise ValidationError('The username is already in use.')
-    
-    def validate_password(self, field):
-        bad_password_message = """Пароль должен:\n
-                              быть больше 10 символов,\n
-                              содержать буквы и цифры,\n
-                              содержать буквы разного регистра.\n"""
-        if not is_password_valid(field.data):
-            raise ValidationError(bad_password_message)
 
 
 class ForgetPasswordForm(FlaskForm):
@@ -50,14 +44,6 @@ class ForgetPasswordForm(FlaskForm):
 class ResetPasswordForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length(1, 254), Email()])
     password = PasswordField('Password', validators=[
-        DataRequired(), EqualTo('password2')])
+        DataRequired(), is_password_valid, EqualTo('password2')])
     password2 = PasswordField('Confirm password', validators=[DataRequired()])
     submit = SubmitField()
-    
-    def validate_password(self, field):
-        bad_password_message = """Пароль должен:\n
-                              быть больше 10 символов,\n
-                              содержать буквы и цифры,\n
-                              содержать буквы разного регистра.\n"""
-        if not is_password_valid(field.data):
-            raise ValidationError(bad_password_message)

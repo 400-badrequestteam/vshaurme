@@ -51,17 +51,9 @@ class ChangeEmailForm(FlaskForm):
 class ChangePasswordForm(FlaskForm):
     old_password = PasswordField('Old Password', validators=[DataRequired()])
     password = PasswordField('New Password', validators=[
-        DataRequired(), EqualTo('password2')])
+        DataRequired(), is_password_valid, EqualTo('password2')])
     password2 = PasswordField('Confirm Password', validators=[DataRequired()])
     submit = SubmitField()
-
-    def validate_password(self, field):
-        bad_password_message = """Пароль должен:\n
-                              быть больше 10 символов,\n
-                              содержать буквы и цифры,\n
-                              содержать буквы разного регистра.\n"""
-        if not is_password_valid(field.data):
-            raise ValidationError(bad_password_message)
 
 
 class NotificationSettingForm(FlaskForm):
