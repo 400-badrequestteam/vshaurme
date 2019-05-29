@@ -3,6 +3,8 @@ from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, HiddenField, ValidationError
 from wtforms.validators import DataRequired, Length, Email, EqualTo, Optional, Regexp
+from vshaurme.vshaurme_validators.validate_password import is_password_valid
+from vshaurme.vshaurme_validators.validate_username import is_username_valid
 
 from vshaurme.models import User
 
@@ -11,7 +13,8 @@ class EditProfileForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired(), Length(1, 30)])
     username = StringField('Username', validators=[DataRequired(), Length(1, 20),
                                                    Regexp('^[a-zA-Z0-9]*$',
-                                                          message='The username should contain only a-z, A-Z and 0-9.')])
+                                                          message='The username should contain only a-z, A-Z and 0-9.'),
+                                                          is_username_valid])
     website = StringField('Website', validators=[Optional(), Length(0, 255)])
     location = StringField('City', validators=[Optional(), Length(0, 50)])
     bio = TextAreaField('Bio', validators=[Optional(), Length(0, 120)])
@@ -50,7 +53,7 @@ class ChangeEmailForm(FlaskForm):
 class ChangePasswordForm(FlaskForm):
     old_password = PasswordField('Old Password', validators=[DataRequired()])
     password = PasswordField('New Password', validators=[
-        DataRequired(), Length(8, 128), EqualTo('password2')])
+        DataRequired(), is_password_valid, EqualTo('password2')])
     password2 = PasswordField('Confirm Password', validators=[DataRequired()])
     submit = SubmitField()
 
