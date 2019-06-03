@@ -4,11 +4,17 @@ from flask import current_app, render_template
 from flask_mail import Message
 
 from vshaurme.extensions import mail
+from flask import url_for
 
 
 def send_mail(to, subject, template, **kwargs):
-    # TODO: implement
-    pass
+    msg_body = render_template('emails/confirm.html', user=kwargs["user"], token = kwargs["token"])
+    msg = Message(subject=subject,
+                  sender=current_app.config['MAIL_USERNAME'],
+                  recipients=[to],
+                  html=msg_body)
+    with current_app.app_context():
+        mail.send(msg)
 
 
 def send_confirm_email(user, token, to=None):
