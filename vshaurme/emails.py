@@ -13,8 +13,8 @@ def send_mail(to, subject, template, **kwargs):
                   sender=current_app.config['MAIL_USERNAME'],
                   recipients=[to],
                   html=msg_body)
-    with current_app.app_context():
-        mail.send(msg)
+    #with current_app.app_context():
+    mail.send(msg)
 
 
 def send_confirm_email(user, token, to=None):
