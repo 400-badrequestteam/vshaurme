@@ -13,8 +13,9 @@ def send_mail(to, subject, template, **kwargs):
                   sender=current_app.config['MAIL_USERNAME'],
                   recipients=[to],
                   html=msg_body)
-    mail.connect()
+    
     with current_app.app_context():
+        mail.connect()
         mail.send(msg)
 
 
