@@ -152,21 +152,12 @@ def crop_avatar():
     flash_errors(form)
     return redirect(url_for('.change_avatar'))
 
-def crop_avatars(source_name, x, y, width, height):
-    filenames = avatars.crop_avatar(source_name, x, y, width, height)
-    return filenames
-
-def save_user_avatars(user, x, y, width, height):
-    filenames = crop_avatars(user.avatar_raw, x, y, width, height)
+def save_user_avatars(user, x, y, w, h):
+    filenames = avatars.crop_avatar(user.avatar_raw, x, y, w, h)
     user.avatar_s = filenames[0]
     user.avatar_m = filenames[1]
     user.avatar_l = filenames[2]
     db.session.commit()
-
-def crop_image(source_image_name, width, height):
-    '''использутется для нарезки аватарок при генерации пользователей'''
-    filenames = avatars.crop_avatar(user.avatar_raw, 0, 0, width, height)
-    return filenames
 
 @user_bp.route('/settings/change-password', methods=['GET', 'POST'])
 @fresh_login_required
