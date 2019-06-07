@@ -6,6 +6,13 @@ from flask_mail import Message
 from vshaurme.extensions import mail
 from flask import url_for
 
+###################################################### rollback initiation begin
+
+import os
+import rollbar
+import rollbar.contrib.flask
+from flask import got_request_exception
+###################################################### rollback initiation end
 
 def send_mail(to, subject, template, **kwargs):
     msg_body = render_template('emails/confirm.html', user=kwargs["user"], token = kwargs["token"])
@@ -14,9 +21,11 @@ def send_mail(to, subject, template, **kwargs):
                   recipients=[to],
                   html=msg_body)
     
-    with current_app.app_context():
+    rollbar.report_message('MAIL_USERNAME=' + current_app.config['MAIL_USERNAME'], 'info')
+
+    '''with current_app.app_context():
         mail.connect()
-        mail.send(msg)
+        mail.send(msg)'''
 
 
 def send_confirm_email(user, token, to=None):
