@@ -23,9 +23,9 @@ def send_mail(to, subject, template, **kwargs):
     
     rollbar.report_message('MAIL_USERNAME=' + current_app.config['MAIL_USERNAME'], 'info')
 
-    '''with current_app.app_context():
-        mail.connect()
-        mail.send(msg)'''
+    with current_app.app_context():
+        #mail.connect()
+        mail.send(msg)
 
 
 def send_confirm_email(user, token, to=None):
