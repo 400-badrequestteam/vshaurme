@@ -96,7 +96,6 @@ def resend_confirm_email():
     token = generate_token(user=current_user, operation=Operations.CONFIRM)
     send_confirm_email(user=current_user, token=token)
     flash('New email sent, check your inbox.', 'info')
-    #flash('AIL_USERNAME=' + current_app.config['MAIL_USERNAME'], 'info')
     return redirect(url_for('main.index'))
 
 
