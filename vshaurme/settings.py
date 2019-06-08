@@ -1,7 +1,12 @@
 import os
 import sys
 
+from dotenv import load_dotenv
+
 basedir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+
+env_path = os.path.join(basedir, 'env', '.env')
+load_dotenv(dotenv_path=env_path)
 
 # SQLite URI compatible
 WIN = sys.platform.startswith('win')
