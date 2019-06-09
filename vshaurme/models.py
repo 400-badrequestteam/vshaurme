@@ -274,10 +274,13 @@ def delete_avatars(**kwargs):
     for filename in [target.avatar_s, target.avatar_m, target.avatar_l, target.avatar_raw]:
         if filename is not None:  # avatar_raw may be None
             path = os.path.join(current_app.config['AVATARS_SAVE_PATH'], filename)
-
+            if os.path.exists(path):
+                os.remove(path)
 
 @db.event.listens_for(Photo, 'after_delete', named=True)
 def delete_photos(**kwargs):
     target = kwargs['target']
     for filename in [target.filename, target.filename_s, target.filename_m]:
         path = os.path.join(current_app.config['VSHAURME_UPLOAD_PATH'], filename)
+        if os.path.exists(path):
+            os.remove(path)
