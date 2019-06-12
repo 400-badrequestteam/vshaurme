@@ -41,3 +41,6 @@ def permission_required(permission_name):
 
 def admin_required(func):
     return permission_required('ADMINISTER')(func)
+
+def moderator_required(func):
+    return permission_required('MODERATE')(func)
