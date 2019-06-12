@@ -31,3 +31,5 @@ rollbar==0.12.1
 Flask-Avatars==0.2.2
 transliterate==1.10.2
 python-dotenv==0.10.3
+Babel==2.7.0
+Flask-Babel==0.12.2

@@ -1,4 +1,5 @@
 from wtforms import ValidationError
+from flask_babel import lazy_gettext
 
 
 def has_digit(password):
@@ -24,11 +25,12 @@ def is_password_short(password):
 
 
 def is_password_valid(self, field):
-    bad_password_message = """Пароль должен:\n
-                              быть больше 10 символов,\n
-                              содержать буквы и цифры,\n
-                              содержать буквы разного регистра.\n"""
+    message_text = lazy_gettext(
+                    "Password must be: more than 10 characters,"
+                    " contains letters and numbers,"
+                    " contains different case letters"
+                    )
     first_condition = is_password_short(field.data)
     second_condition = has_digit_and_upper_lower_exist(field.data)
     if first_condition or not second_condition:
-        raise ValidationError(bad_password_message)
+        raise ValidationError(message_text)

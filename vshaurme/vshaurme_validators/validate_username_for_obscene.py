@@ -1,6 +1,7 @@
 from transliterate import translit
 from flask import current_app
 from wtforms import ValidationError
+from flask_babel import lazy_gettext
 
 
 def get_english_black_list(path_to_english_black_list_file):
@@ -31,9 +32,9 @@ def username_in_black_lists(username, english_black_list,
 
 
 def is_username_obscene(self, field):
-    username = field.data
-    bad_username_message = """Недопустимо использовать матерные слова!\n
-                              Пожалуйста, не надо так!"""
+    username = field.data                   
+    bad_username_message = lazy_gettext("You should not use obscenic words!"
+                                        " Please do not be so!")
     russian_words_path = current_app.config['VSHAURME_RUSSIAN_BAD_WORDS']
     english_words_path = current_app.config['VSHAURME_ENGLISH_BAD_WORDS']
     try:

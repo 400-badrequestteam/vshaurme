@@ -68,6 +68,8 @@ class BaseConfig:
     DROPZONE_ENABLE_CSRF = True
 
     WHOOSHEE_MIN_STRING_LEN = 1
+    #BABEL_TRANSLATION_DIRECTORIES = '/home/nicko/vshaurme/vshaurme/translations'
+    LANGUAGES = {'en': 'English', 'ru': 'Russian'}
 
 
 class DevelopmentConfig(BaseConfig):

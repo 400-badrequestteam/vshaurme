@@ -1,0 +1,1102 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-06-12 23:25+0300\n"
+"PO-Revision-Date: 2019-06-11 14:26+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: decorators.py:14
+msgid "Please confirm your account first."
+msgstr "Пожалуйста подтврдите сначала ваш аккаунт"
+
+#: decorators.py:15
+msgid "Not receive the email?"
+msgstr "Не получили письмо?"
+
+#: decorators.py:17
+msgid "Resend Confirm Email"
+msgstr "Повторно отправить подтверждение"
+
+#: utils.py:98
+msgid "Error in the"
+msgstr "Ошибка в"
+
+#: utils.py:100
+msgid "field"
+msgstr "поле"
+
+#: blueprints/admin.py:52 blueprints/user.py:108
+msgid "Profile updated."
+msgstr "Профиль обновлен"
+
+#: blueprints/admin.py:71 blueprints/admin.py:92
+msgid "Permission denied."
+msgstr "Доступ запрещен."
+
+#: blueprints/admin.py:74
+msgid "Account blocked."
+msgstr "Аккаунт заблокирован."
+
+#: blueprints/admin.py:83
+msgid "Block canceled."
+msgstr "Блокирование отменено."
+
+#: blueprints/admin.py:95
+msgid "Account locked."
+msgstr "Аккаунт блокирован."
+
+#: blueprints/admin.py:104
+msgid "Lock canceled."
+msgstr "Блокировка отменена."
+
+#: blueprints/admin.py:114 blueprints/main.py:394
+msgid "Tag deleted."
+msgstr "Тэг удален."
+
+#: blueprints/auth.py:25
+msgid "Login success."
+msgstr "Успешный вход."
+
+#: blueprints/auth.py:28
+msgid "Your account is blocked."
+msgstr "Ваш аккаунт заблокирован."
+
+#: blueprints/auth.py:30
+msgid "Invalid email or password."
+msgstr "Неправильный адрес электронной почты или пароль."
+
+#: blueprints/auth.py:51
+msgid "Logout success."
+msgstr "Успешный выход."
+
+#: blueprints/auth.py:72 blueprints/user.py:186
+msgid "Confirm email sent, check your inbox."
+msgstr "Подтвердждение отправлено, проверьте свой почтовый ящик."
+
+#: blueprints/auth.py:84
+msgid "Account confirmed."
+msgstr "Аккаунт подтвержден."
+
+#: blueprints/auth.py:87 blueprints/user.py:198
+msgid "Invalid or expired token."
+msgstr "Неверный или просроченный токен."
+
+#: blueprints/auth.py:99
+msgid "New email sent, check your inbox."
+msgstr "Новое письмо отправлено, проверьте свой почтовый ящик."
+
+#: blueprints/auth.py:114
+msgid "Password reset email sent, check your inbox."
+msgstr "Письмо со сбросом пароля отправлено, проверьте свой почтовый ящик."
+
+#: blueprints/auth.py:116
+msgid "Invalid email."
+msgstr "Неверный адрес электронной почты."
+
+#: blueprints/auth.py:133 blueprints/user.py:172
+msgid "Password updated."
+msgstr "Пароль обновлен."
+
+#: blueprints/auth.py:136
+msgid "Invalid or expired link."
+msgstr "Неверная или просроченная ссылка."
+
+#: blueprints/main.py:47
+msgid "Enter keyword about photo, user or tag."
+msgstr "Введите ключевое слово о фотографии, пользователе или тэге."
+
+#: blueprints/main.py:87
+msgid "Notification archived."
+msgstr "Уведомление заархивировано."
+
+#: blueprints/main.py:97
+msgid "All notifications archived."
+msgstr "Все уведомления прочитаны."
+
+#: blueprints/main.py:157
+msgid "This is already the last one."
+msgstr "Это уже последний."
+
+#: blueprints/main.py:168
+msgid "This is already the first one."
+msgstr "Это уже первый."
+
+#: blueprints/main.py:180
+msgid "Already collected."
+msgstr "Уже в избранном."
+
+#: blueprints/main.py:184
+msgid "Photo collected."
+msgstr "Фото добавлено в избранное."
+
+#: blueprints/main.py:195
+msgid "Not collect yet."
+msgstr "Еще не добавлено в избранное."
+
+#: blueprints/main.py:199
+msgid "Photo uncollected."
+msgstr "Фото удалено из избранного."
+
+#: blueprints/main.py:210
+msgid "Comment reported."
+msgstr "Комментарий отправлен."
+
+#: blueprints/main.py:221
+msgid "Photo reported."
+msgstr "Фото отправлено."
+
+#: blueprints/main.py:246
+msgid "Description updated."
+msgstr "Описание обновлено."
+
+#: blueprints/main.py:271
+msgid "Comment published."
+msgstr "Комментарий опубликован."
+
+#: blueprints/main.py:298
+msgid "Tag added."
+msgstr "Тэг добавлен."
+
+#: blueprints/main.py:313
+msgid "Comment disabled"
+msgstr "Комментирование запрещено"
+
+#: blueprints/main.py:316
+msgid "Comment enabled."
+msgstr "Комментирование разрешено."
+
+#: blueprints/main.py:340
+msgid "Photo deleted."
+msgstr "Фото удалено."
+
+#: blueprints/main.py:360
+msgid "Comment deleted."
+msgstr "Комментарий удален."
+
+#: blueprints/user.py:25
+msgid "Your account is locked."
+msgstr "Ваш аккаунт заблокирован."
+
+#: blueprints/user.py:54
+msgid "Already followed."
+msgstr "Уже подписан."
+
+#: blueprints/user.py:58
+msgid "User followed."
+msgstr "Пользователь подписан."
+
+#: blueprints/user.py:69
+msgid "Not follow yet."
+msgstr "Еще не подписан."
+
+#: blueprints/user.py:73
+msgid "User unfollowed."
+msgstr "Пользователь отписался."
+
+#: blueprints/user.py:137
+msgid "Image uploaded, please crop."
+msgstr "Изображение загружено, пожалуйста, обрежьте его."
+
+#: blueprints/user.py:153
+msgid "Avatar updated."
+msgstr "Автар обновлен."
+
+#: blueprints/user.py:175
+msgid "Old password is incorrect."
+msgstr "Старый пароль некорректен."
+
+#: blueprints/user.py:195
+msgid "Email updated."
+msgstr "Электронная почта обновлена."
+
+#: blueprints/user.py:211
+msgid "Notification settings updated."
+msgstr "Настройки уведомлений обновлены."
+
+#: blueprints/user.py:226
+msgid "Privacy settings updated."
+msgstr "Настройки конфиденциальности обновлены."
+
+#: blueprints/user.py:239
+msgid "Your are free, goodbye!"
+msgstr "Вы свободны, до свидания!"
+
+#: forms/admin.py:11 forms/auth.py:13 forms/auth.py:21 forms/auth.py:41
+#: forms/auth.py:46 templates/admin/manage_user.html:101
+#: templates/user/_header.html:56
+msgid "Email"
+msgstr "Электронная почта"
+
+#: forms/admin.py:12 templates/admin/manage_user.html:49
+msgid "Role"
+msgstr "Роль"
+
+#: forms/admin.py:13
+msgid "Active"
+msgstr "Активный"
+
+#: forms/admin.py:14
+msgid "Confirmed"
+msgstr "Подтвержден"
+
+#: forms/admin.py:15 forms/user.py:24 forms/user.py:70 forms/user.py:75
+msgid "Apply"
+msgstr "Применить"
+
+#: forms/admin.py:25 forms/auth.py:37 forms/user.py:28
+msgid "The username is already in use."
+msgstr "Имя пользователя уже используется."
+
+#: forms/admin.py:29 forms/auth.py:33 forms/user.py:55
+msgid "The email is already in use."
+msgstr "Элетронная почта уже используется."
+
+#: forms/auth.py:14 forms/auth.py:26 forms/auth.py:47
+msgid "Password"
+msgstr "Пароль"
+
+#: forms/auth.py:15
+msgid "Remember me"
+msgstr "Запомнить меня"
+
+#: forms/auth.py:16 forms/auth.py:29
+msgid "Log in"
+msgstr "Вход"
+
+#: forms/auth.py:20 forms/user.py:14 templates/admin/manage_tag.html:23
+msgid "Name"
+msgstr "Имя"
+
+#: forms/auth.py:22 forms/user.py:15 forms/user.py:79
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: forms/auth.py:28 forms/auth.py:49
+msgid "Confirm password"
+msgstr "Подтвердить пароль"
+
+#: forms/auth.py:42
+msgid "Remind"
+msgstr "Напомнить"
+
+#: forms/auth.py:50
+msgid "Reset"
+msgstr "Сброс"
+
+#: forms/main.py:8 templates/admin/manage_photo.html:36
+msgid "Description"
+msgstr "Описание"
+
+#: forms/main.py:9 forms/main.py:14 forms/main.py:19
+msgid "Add"
+msgstr "Добавить"
+
+#: forms/main.py:13
+msgid "Add Tag (use space to separate)"
+msgstr "Добавить тэг (используйте пробел для разделения)"
+
+#: forms/user.py:18
+msgid "The username should contain only"
+msgstr "Имя пользователя должно содержать только"
+
+#: forms/user.py:19
+msgid "and"
+msgstr "и"
+
+#: forms/user.py:21
+msgid "Website"
+msgstr "Вебсайт"
+
+#: forms/user.py:22 templates/admin/manage_user.html:51
+msgid "City"
+msgstr "Город"
+
+#: forms/user.py:23 templates/admin/manage_user.html:50
+msgid "Bio"
+msgstr "О себе"
+
+#: forms/user.py:32 forms/user.py:38 templates/base.html:51
+#: templates/main/upload.html:3 templates/main/upload.html:13
+#: templates/user/index.html:19
+msgid "Upload"
+msgstr "Загрузить"
+
+#: forms/user.py:35
+msgid "The file format should be"
+msgstr "Формат файла должен быть"
+
+#: forms/user.py:36
+msgid "or"
+msgstr "или"
+
+#: forms/user.py:46
+msgid "Crop and Update"
+msgstr "Обрезать и Обновить"
+
+#: forms/user.py:50
+msgid "New Email"
+msgstr "Новый email-адрес"
+
+#: forms/user.py:51 forms/user.py:63 templates/main/explore.html:16
+msgid "Change"
+msgstr "Обновить"
+
+#: forms/user.py:59
+msgid "Old Password"
+msgstr "Старый пароль"
+
+#: forms/user.py:60
+msgid "New Password"
+msgstr "Новый пароль"
+
+#: forms/user.py:62
+msgid "Confirm Password"
+msgstr "Подтвердить пароль"
+
+#: forms/user.py:67
+msgid "New comment"
+msgstr "Новый комментарий"
+
+#: forms/user.py:68
+msgid "New follower"
+msgstr "Новый подписчик"
+
+#: forms/user.py:69
+msgid "New collector"
+msgstr "Новый коллекционер"
+
+#: forms/user.py:74
+msgid "Public my collection"
+msgstr "Опубликовать мою коллекцию"
+
+#: forms/user.py:80 templates/admin/manage_comment.html:59
+#: templates/admin/manage_photo.html:77 templates/admin/manage_tag.html:37
+#: templates/main/_comment.html:59 templates/main/photo.html:18
+#: templates/main/photo.html:70 templates/main/tag.html:15
+msgid "Delete"
+msgstr "Удалить"
+
+#: forms/user.py:84
+msgid "Wrong username."
+msgstr "Неправильное имя пользователя."
+
+#: templates/base.html:9 templates/emails/confirm.html:2
+msgid "Vshaurme"
+msgstr "Вшаурме"
+
+#: templates/base.html:33 templates/main/index.html:5
+msgid "Home"
+msgstr "Домой"
+
+#: templates/base.html:34 templates/main/explore.html:4
+#: templates/main/index.html:77 templates/user/index.html:21
+msgid "Explore"
+msgstr "Обзор"
+
+#: templates/base.html:36
+msgid "Photo, tag or user"
+msgstr "Фото, тэг или пользователь"
+
+#: templates/admin/index.html:39 templates/base.html:62
+msgid "Logged in as"
+msgstr "Вы вошли как"
+
+#: templates/admin/index.html:41 templates/base.html:64
+msgid "My Home"
+msgstr "Домой"
+
+#: templates/admin/index.html:45 templates/base.html:68
+#: templates/main/notifications.html:28 templates/user/settings/base.html:8
+msgid "Settings"
+msgstr "Настройки"
+
+#: templates/admin/index.html:4 templates/base.html:72
+msgid "Dashboard"
+msgstr "Панель управления"
+
+#: templates/admin/index.html:48 templates/base.html:76
+msgid "Logout"
+msgstr "Выход"
+
+#: templates/auth/login.html:4 templates/base.html:81
+#: templates/main/_comment.html:121
+msgid "Login"
+msgstr "Вход"
+
+#: templates/base.html:82
+msgid "Join Vshaurme"
+msgstr "Присоединиться к Вшаурме"
+
+#: templates/macros.html:32 templates/main/profile_popup.html:34
+msgid "Unfollow"
+msgstr "Отписаться"
+
+#: templates/macros.html:34 templates/main/profile_popup.html:9
+msgid "Follow each other"
+msgstr "Подписаны друг на друга"
+
+#: templates/macros.html:41 templates/macros.html:52
+#: templates/main/profile_popup.html:39 templates/main/profile_popup.html:46
+msgid "Follow"
+msgstr "Подписаться"
+
+#: templates/macros.html:43 templates/main/profile_popup.html:11
+msgid "Follows you"
+msgstr "Ваши подписчики"
+
+#: templates/admin/edit_profile.html:5 templates/admin/manage_user.html:104
+#: templates/user/_header.html:60 templates/user/_header.html:66
+msgid "Edit profile"
+msgstr "Редактировать профиль"
+
+#: templates/admin/edit_profile.html:17 templates/main/collectors.html:12
+msgid "Return"
+msgstr "Возврат"
+
+#: templates/admin/edit_profile.html:18
+msgid "'s homepage"
+msgstr "домашняя страница"
+
+#: templates/admin/edit_profile.html:22 templates/user/settings/base.html:13
+#: templates/user/settings/edit_profile.html:4
+#: templates/user/settings/edit_profile.html:8
+msgid "Edit Profile"
+msgstr "Редактировать профиль"
+
+#: templates/admin/index.html:10
+msgid "Vshaurme Dashboard"
+msgstr "Панель управления Вшаурме"
+
+#: templates/admin/index.html:19
+msgid "Return Vshaurme"
+msgstr "Вернуться к Вшаурме"
+
+#: templates/admin/index.html:22 templates/admin/index.html:71
+#: templates/admin/index.html:82 templates/admin/index.html:96
+#: templates/admin/index.html:106
+msgid "Manage"
+msgstr "Управление"
+
+#: templates/admin/index.html:25 templates/admin/index.html:67
+#: templates/admin/manage_tag.html:24 templates/admin/manage_user.html:53
+#: templates/main/profile_popup.html:19
+msgid "Photos"
+msgstr "Фотографии"
+
+#: templates/admin/index.html:26 templates/admin/index.html:77
+#: templates/admin/manage_user.html:14
+msgid "Users"
+msgstr "Пользователи"
+
+#: templates/admin/index.html:27 templates/admin/index.html:102
+#: templates/admin/manage_tag.html:14
+msgid "Tags"
+msgstr "Тэги"
+
+#: templates/admin/index.html:28 templates/admin/index.html:92
+#: templates/admin/manage_comment.html:14 templates/main/_comment.html:2
+msgid "Comments"
+msgstr "Комментариев"
+
+#: templates/admin/index.html:61 templates/admin/manage_comment.html:9
+#: templates/admin/manage_photo.html:9 templates/admin/manage_tag.html:9
+#: templates/admin/manage_user.html:9
+msgid "Dashboard Home"
+msgstr "Панель управления Домашняя"
+
+#: templates/admin/index.html:69 templates/admin/index.html:79
+#: templates/admin/index.html:94
+msgid "Total:"
+msgstr "Итого:"
+
+#: templates/admin/index.html:70 templates/admin/index.html:95
+msgid "Reported:"
+msgstr "Опубликовано:"
+
+#: templates/admin/index.html:80
+msgid "Locked:"
+msgstr "Заблокировано:"
+
+#: templates/admin/index.html:81
+msgid "Blocked:"
+msgstr "Блокировано:"
+
+#: templates/admin/index.html:83
+msgid "View Locked"
+msgstr "Показать заблокированных"
+
+#: templates/admin/index.html:84
+msgid "View Blocked"
+msgstr "Показать ограниченных"
+
+#: templates/admin/manage_comment.html:4
+msgid "Manage Comments"
+msgstr "Управление комментариями"
+
+#: templates/admin/manage_comment.html:10
+msgid "Manage Comment"
+msgstr "Управление комментарием"
+
+#: templates/admin/manage_comment.html:19 templates/admin/manage_photo.html:19
+#: templates/main/tag.html:21
+msgid "Order by"
+msgstr "Отображать по"
+
+
+#: templates/admin/manage_comment.html:23 templates/admin/manage_photo.html:23
+#: templates/main/tag.html:25
+msgid "Order by Time"
+msgstr "Отображать по Времени"
+
+
+#: templates/admin/manage_comment.html:25 templates/admin/manage_photo.html:25
+msgid "Order by Flag"
+msgstr "Отображать по Флагу"
+
+#: templates/admin/manage_comment.html:35
+msgid "Body"
+msgstr "Тело"
+
+#: templates/admin/manage_comment.html:36 templates/admin/manage_photo.html:38
+#: templates/main/_comment.html:34
+msgid "Author"
+msgstr "Автор"
+
+#: templates/admin/manage_comment.html:37 templates/admin/manage_photo.html:35
+msgid "Image"
+msgstr "Изоображение"
+
+#: templates/admin/manage_comment.html:38 templates/admin/manage_photo.html:39
+msgid "Reported"
+msgstr "опубликовано"
+
+#: templates/admin/manage_comment.html:39 templates/admin/manage_photo.html:40
+#: templates/admin/manage_user.html:52
+msgid "Date"
+msgstr "Дата"
+
+#: templates/admin/manage_comment.html:40 templates/admin/manage_photo.html:41
+#: templates/admin/manage_tag.html:25 templates/admin/manage_user.html:54
+msgid "Actions"
+msgstr "Действия"
+
+#: templates/admin/manage_comment.html:50 templates/main/search.html:15
+#: templates/user/_header.html:74
+msgid "Photo"
+msgstr "Фото"
+
+#: templates/admin/manage_comment.html:59 templates/admin/manage_photo.html:59
+#: templates/admin/manage_photo.html:77 templates/admin/manage_tag.html:36
+#: templates/admin/manage_user.html:74 templates/admin/manage_user.html:81
+#: templates/admin/manage_user.html:89 templates/admin/manage_user.html:96
+#: templates/main/tag.html:14
+msgid "Are you sure?"
+msgstr "Вы уверены?"
+
+#: templates/admin/manage_comment.html:68 templates/main/_comment.html:91
+msgid "No comments."
+msgstr "Нет комментариев."
+
+#: templates/admin/manage_photo.html:4
+msgid "Manage Photos"
+msgstr "Управление фотографиями"
+
+#: templates/admin/manage_photo.html:10
+msgid "Manage Photo"
+msgstr "Управление фотографией"
+
+#: templates/admin/manage_photo.html:37 templates/main/search.html:19
+msgid "Tag"
+msgstr "Тэг"
+
+#: templates/admin/manage_photo.html:86 templates/user/index.html:17
+msgid "No photos."
+msgstr "Нет фотографий."
+
+#: templates/admin/manage_tag.html:4
+msgid "Manage Tags"
+msgstr "Управление Тэгами."
+
+#: templates/admin/manage_tag.html:10
+msgid "Manage Tag"
+msgstr "Управление Тэгом."
+
+#: templates/admin/manage_tag.html:22
+msgid "No."
+msgstr "Нет."
+
+#: templates/admin/manage_tag.html:45
+msgid "No tags."
+msgstr "Нет тэгов."
+
+#: templates/admin/manage_user.html:4
+msgid "Manage Users"
+msgstr "Управление пользователями"
+
+#: templates/admin/manage_user.html:10
+msgid "Manage User"
+msgstr "Управление пользователем"
+
+#: templates/admin/manage_user.html:19
+msgid "Filter"
+msgstr "Фильтр"
+
+#: templates/admin/manage_user.html:23 templates/main/notifications.html:15
+msgid "All"
+msgstr "Все"
+
+#: templates/admin/manage_user.html:27
+msgid "Locked"
+msgstr "Ограниченные"
+
+#: templates/admin/manage_user.html:31
+msgid "Blocked"
+msgstr "Заблокированные"
+
+#: templates/admin/manage_user.html:35
+msgid "Administrator"
+msgstr "Администратор"
+
+#: templates/admin/manage_user.html:39
+msgid "Moderator"
+msgstr "Модератор"
+
+#: templates/admin/manage_user.html:47
+msgid "Avatars"
+msgstr "Аватары"
+
+#: templates/admin/manage_user.html:48
+msgid "Name/username"
+msgstr "Имя/имя пользователя"
+
+#: templates/admin/manage_user.html:75
+msgid "Unlock"
+msgstr "Снять ограничения"
+
+#: templates/admin/manage_user.html:82
+msgid "lock"
+msgstr "Ограничить"
+
+#: templates/admin/manage_user.html:90
+msgid "Block"
+msgstr "Заблокировать"
+
+#: templates/admin/manage_user.html:97
+msgid "Unblock"
+msgstr "Разблокировать"
+
+#: templates/admin/manage_user.html:112
+msgid "No users."
+msgstr "Нет пользователей."
+
+#: templates/auth/login.html:14
+msgid "Log in to Vshaurme"
+msgstr "Вход в Вшаурме"
+
+#: templates/auth/login.html:18
+msgid "Register new account"
+msgstr "Зарегистрировать новый аккаунт"
+
+#: templates/auth/login.html:19
+msgid "Forget password"
+msgstr "Забыли пароль"
+
+#: templates/auth/register.html:4 templates/main/_comment.html:123
+msgid "Register"
+msgstr "Регистрация"
+
+#: templates/auth/register.html:14
+msgid "Welcome to Vshaurme!"
+msgstr "Добро пожаловать в Вшаурме!"
+
+#: templates/auth/register.html:18
+msgid "Already have an account?"
+msgstr "Уже есть аккаунт?"
+
+#: templates/auth/register.html:18
+msgid "Click here to log in."
+msgstr "Нажмите сюда для входа."
+
+#: templates/auth/reset_password.html:4 templates/auth/reset_password.html:8
+msgid "Password Reset"
+msgstr "Сброс пароля"
+
+#: templates/emails/change_email.html:1 templates/emails/confirm.html:1
+#: templates/emails/reset_password.html:1
+msgid "Hello"
+msgstr "Привет"
+
+#: templates/emails/change_email.html:2
+msgid "Please visit the link below to verify your new email address:"
+msgstr ""
+"Пожалуйста, перейдите по ссылке ниже, чтобы подтвердить свой новый адрес "
+"электронной почты:"
+
+#: templates/emails/change_email.html:5 templates/emails/confirm.html:6
+#: templates/emails/reset_password.html:5
+msgid "Please do not reply to this notification, this inbox is not monitored."
+msgstr ""
+"Пожалуйста, не отвечайте на это уведомление, этот почтовый ящик не "
+"отслеживается."
+
+#: templates/emails/confirm.html:2
+msgid "Welcome to"
+msgstr "Добро пожаловать в"
+
+#: templates/emails/confirm.html:3
+msgid "Please visit the link below to verify your email address:"
+msgstr ""
+"Пожалуйста, перейдите по ссылке ниже, чтобы подтвердить свой адрес "
+"электронной почты:"
+
+#: templates/emails/reset_password.html:2
+msgid "Here is your password reset link:"
+msgstr "Вот ваша ссылка для сброса пароля:"
+
+#: templates/errors/400.html:3 templates/errors/400.html:10
+msgid "400 Error"
+msgstr "Ошибка 400"
+
+#: templates/errors/400.html:11
+msgid "Bad request"
+msgstr "Плохой запрос"
+
+#: templates/errors/400.html:15 templates/errors/403.html:15
+#: templates/errors/404.html:15 templates/errors/413.html:15
+#: templates/errors/500.html:15
+msgid "Return Home"
+msgstr "Вернуться домой"
+
+#: templates/errors/403.html:3 templates/errors/403.html:10
+msgid "403 Error"
+msgstr "Ошибка 403"
+
+#: templates/errors/403.html:11
+msgid "Forbidden"
+msgstr "Запрещено"
+
+#: templates/errors/404.html:3 templates/errors/404.html:10
+msgid "404 Error"
+msgstr "Ошибка 404"
+
+#: templates/errors/404.html:11
+msgid "Page Not Found"
+msgstr "Страница не найдено"
+
+#: templates/errors/413.html:3 templates/errors/413.html:10
+msgid "413 Error"
+msgstr "Ошибка 413"
+
+#: templates/errors/413.html:11
+msgid "Request Entity Too Large"
+msgstr "Запрашиваемый объект слишком большой"
+
+#: templates/errors/500.html:3 templates/errors/500.html:10
+msgid "500 Error"
+msgstr "Ошибка 500"
+
+#: templates/errors/500.html:11
+msgid "Internal Server Error"
+msgstr "Внутренняя ошибка сервера"
+
+#: templates/main/_comment.html:4
+msgid "latest"
+msgstr "последний"
+
+#: templates/main/_comment.html:10
+msgid "Disable"
+msgstr "Запретить"
+
+#: templates/main/_comment.html:10
+msgid "Enable"
+msgstr "Разрешить"
+
+#: templates/main/_comment.html:10
+msgid "comment"
+msgstr "комментировать"
+
+#: templates/main/_comment.html:52
+msgid "Reply"
+msgstr "Ответ"
+
+#: templates/main/_comment.html:67 templates/main/photo.html:23
+msgid "Report"
+msgstr "Отчет"
+
+#: templates/main/_comment.html:99
+msgid "Reply to"
+msgstr "Ответить "
+
+#: templates/main/_comment.html:100 templates/main/_photo_sidebar.html:49
+#: templates/main/_photo_sidebar.html:75 templates/main/photo.html:69
+msgid "Cancel"
+msgstr "Отмена"
+
+#: templates/main/_comment.html:116
+msgid "No permission."
+msgstr "Нет прав."
+
+#: templates/main/_comment.html:123
+msgid "to leave a comment."
+msgstr "чтобы оставлять комментарий."
+
+#: templates/main/_comment.html:128
+msgid "Comment disabled."
+msgstr "Комментарий отменен."
+
+#: templates/main/_photo_sidebar.html:6
+msgid "Previous"
+msgstr "Предыдущее"
+
+#: templates/main/_photo_sidebar.html:9
+msgid "Next"
+msgstr "Следующее"
+
+#: templates/main/_photo_sidebar.html:39
+msgid "edit description"
+msgstr "править описание"
+
+#: templates/main/_photo_sidebar.html:65
+msgid "edit tag"
+msgstr "править тэг"
+
+#: templates/main/_photo_sidebar.html:83
+msgid "Delete tag"
+msgstr "Удалить тэг"
+
+#: templates/main/_photo_sidebar.html:98 templates/main/index.html:50
+msgid "Uncollect"
+msgstr "Отменить"
+
+#: templates/main/_photo_sidebar.html:106
+#: templates/main/_photo_sidebar.html:114 templates/main/index.html:56
+#: templates/main/index.html:63
+msgid "Collect"
+msgstr "В избранное"
+
+#: templates/main/_photo_sidebar.html:120
+msgid "collectors"
+msgstr "сохранили"
+
+#: templates/main/_sidebar.html:16
+msgid "My Photos"
+msgstr "Мои фотографии"
+
+#: templates/main/_sidebar.html:19
+msgid "My Collections"
+msgstr "Мои Коллекции"
+
+#: templates/main/_sidebar.html:24
+msgid "Hot Tags"
+msgstr "горячие Тэги"
+
+#: templates/main/collectors.html:5 templates/main/collectors.html:19
+msgid "Collectors"
+msgstr "Загрузки"
+
+#: templates/main/index.html:95
+msgid "VShaurme"
+msgstr "Вшаурме"
+
+#: templates/main/index.html:96
+msgid "Capture and remember every wonderful moment."
+msgstr "Запечатли и запомни каждый чудесный момент."
+
+#: templates/main/index.html:97
+msgid "Join Now"
+msgstr "Присоединиться сейчас"
+
+#: templates/main/notifications.html:4 templates/main/notifications.html:8
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: templates/main/notifications.html:19
+msgid "Unread"
+msgstr "Непрочитанные"
+
+#: templates/main/notifications.html:25
+msgid "unread notifications"
+msgstr "непрочитанные уведомления"
+
+#: templates/main/notifications.html:33
+msgid "Read all"
+msgstr "Прочитать все"
+
+#: templates/main/notifications.html:65
+msgid "No notifications."
+msgstr "Нет уведомлений"
+
+#: templates/main/photo.html:5
+msgid "'s Photo"
+msgstr " Фото"
+
+#: templates/main/photo.html:15
+msgid "Share"
+msgstr "Поделиться"
+
+#: templates/main/photo.html:27
+msgid "Upload at"
+msgstr "Загрузить в"
+
+#: templates/main/photo.html:40
+msgid "Permalink"
+msgstr "Постоянная ссылка"
+
+#: templates/main/photo.html:59
+msgid "Delete Confirm"
+msgstr "Уделить подтверждение"
+
+#: templates/main/photo.html:64
+msgid "Are you sure you want to delete this item?"
+msgstr "Вы уверены, что хотите удалить этот элемент?"
+
+#: templates/main/profile_popup.html:25
+msgid "Followers"
+msgstr "Подписчики"
+
+#: templates/main/profile_popup.html:28
+msgid "Homepage"
+msgstr "Домашняя страница"
+
+#: templates/main/search.html:5
+msgid "Search:"
+msgstr "Поиск:"
+
+#: templates/main/search.html:17
+msgid "User"
+msgstr "Пользователь"
+
+#: templates/main/search.html:24
+msgid "results"
+msgstr "результаты"
+
+#: templates/main/search.html:38
+msgid "No results."
+msgstr "Нет результатов."
+
+#: templates/main/tag.html:11
+msgid "photos"
+msgstr "фотографии"
+
+#: templates/main/tag.html:27
+msgid "Order by Collects"
+msgstr "Отобразить по загрузкам"
+
+#: templates/main/upload.html:19
+msgid "Done"
+msgstr "Готово"
+
+#: templates/user/_header.html:75
+msgid "Collections"
+msgstr "Коллекции"
+
+#: templates/user/_header.html:76
+msgid "Following"
+msgstr "Подписаться"
+
+#: templates/user/_header.html:77
+msgid "Follower"
+msgstr "Подписчик"
+
+#: templates/user/collections.html:5
+msgid "'s collection"
+msgstr " коллекция"
+
+#: templates/user/collections.html:18
+msgid "No collection."
+msgstr "Нет коллекций."
+
+#: templates/user/collections.html:23
+msgid "This user's collections was private."
+msgstr "Коллекции этого пользователя были частными."
+
+#: templates/user/followers.html:5
+msgid "'s followers"
+msgstr " подписчики"
+
+#: templates/user/followers.html:19
+msgid "No followers."
+msgstr "Нет подписчиков."
+
+#: templates/user/following.html:5
+msgid "'s following"
+msgstr " подписки"
+
+#: templates/user/following.html:19
+msgid "No followings."
+msgstr "Нет подписок"
+
+#: templates/user/settings/base.html:14
+#: templates/user/settings/change_avatar.html:4
+#: templates/user/settings/change_avatar.html:13
+msgid "Change Avatar"
+msgstr "Изменить Аватар"
+
+#: templates/user/settings/base.html:15
+#: templates/user/settings/change_password.html:4
+#: templates/user/settings/change_password.html:8
+msgid "Change Password"
+msgstr "Изменить Пароль"
+
+#: templates/user/settings/base.html:16
+#: templates/user/settings/change_email.html:4
+#: templates/user/settings/change_email.html:8
+msgid "Change Email"
+msgstr "Изменить Электонную почту"
+
+#: templates/user/settings/base.html:17
+msgid "Notification"
+msgstr "Оповещения"
+
+#: templates/user/settings/base.html:18
+msgid "Privacy"
+msgstr "Конфиденциальность"
+
+#: templates/user/settings/base.html:19
+#: templates/user/settings/delete_account.html:4
+#: templates/user/settings/delete_account.html:8
+msgid "Delete Account"
+msgstr "Удалить аккаутн"
+
+#: templates/user/settings/change_avatar.html:16
+msgid ""
+"Your file's size must be less than 3 MB, the allowed formats are png and "
+"jpg."
+msgstr "Размер вашего файла должен быть менее 3 МБ, допустимые форматы: png и jpg."
+
+#: templates/user/settings/edit_notification.html:4
+#: templates/user/settings/edit_notification.html:8
+msgid "Notification Settings"
+msgstr "Настройки уведомлений"
+
+#: templates/user/settings/edit_privacy.html:4
+#: templates/user/settings/edit_privacy.html:8
+msgid "Privacy Settings"
+msgstr "Настройки конфиденциальности"
+
+#: vshaurme_validators/validate_password.py:28
+msgid ""
+"Password must be: more than 10 characters, contains letters and numbers, "
+"contains different case letters"
+msgstr ""
+"Пароль должен быть: более 10 символов, содержать буквы и цифры, содержать"
+" разные буквы регистра"
+
+#: vshaurme_validators/validate_username_for_obscene.py:36
+msgid "You should not use obscenic words! Please do not be so!"
+msgstr "Вы не должны использовать нецензурные слова! Пожалуйста, не надо так!"
+

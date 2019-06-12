@@ -4,6 +4,8 @@ import click
 from flask import Flask, render_template
 from flask_login import current_user
 from flask_wtf.csrf import CSRFError
+from flask_babel import Babel
+from flask import request
 
 from vshaurme.blueprints.admin import admin_bp
 from vshaurme.blueprints.ajax import ajax_bp
@@ -22,7 +24,7 @@ def create_app(config_name=None):
     app = Flask('vshaurme')
     
     app.config.from_object(config[config_name])
-
+    register_babel(app)
     register_extensions(app)
     register_blueprints(app)
     register_commands(app)
@@ -31,6 +33,13 @@ def create_app(config_name=None):
     register_template_context(app)
 
     return app
+
+def register_babel(app):
+    babel = Babel(app)
+    @babel.localeselector
+    def get_locale():
+        locale = request.accept_languages.best_match(app.config['LANGUAGES'])
+        return locale
 
 
 def register_extensions(app):

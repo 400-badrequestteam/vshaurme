@@ -6,6 +6,8 @@ from vshaurme.extensions import db
 from vshaurme.forms.admin import EditProfileAdminForm
 from vshaurme.models import Role, User, Tag, Photo, Comment
 from vshaurme.utils import redirect_back
+from flask_babel import lazy_gettext
+
 
 admin_bp = Blueprint('admin', __name__)
 
@@ -47,7 +49,7 @@ def edit_profile_admin(user_id):
         user.username = form.username.data
         user.email = form.email.data
         db.session.commit()
-        flash('Profile updated.', 'success')
+        flash(lazy_gettext('Profile updated.'), 'success')
         return redirect_back()
     form.name.data = user.name
     form.role.data = user.role_id
@@ -66,10 +68,10 @@ def edit_profile_admin(user_id):
 def block_user(user_id):
     user = User.query.get_or_404(user_id)
     if user.role.name in ['Administrator', 'Moderator']:
-        flash('Permission denied.', 'warning')
+        flash(lazy_gettext('Permission denied.'), 'warning')
     else:
         user.block()
-        flash('Account blocked.', 'info')
+        flash(lazy_gettext('Account blocked.'), 'info')
     return redirect_back()
 
 
@@ -78,7 +80,7 @@ def block_user(user_id):
 def unblock_user(user_id):
     user = User.query.get_or_404(user_id)
     user.unblock()
-    flash('Block canceled.', 'info')
+    flash(lazy_gettext('Block canceled.'), 'info')
     return redirect_back()
 
 
@@ -87,10 +89,10 @@ def unblock_user(user_id):
 def lock_user(user_id):
     user = User.query.get_or_404(user_id)
     if user.role.name in ['Administrator', 'Moderator']:
-        flash('Permission denied.', 'warning')
+        flash(lazy_gettext('Permission denied.'), 'warning')
     else:
         user.lock()
-        flash('Account locked.', 'info')
+        flash(lazy_gettext('Account locked.'), 'info')
     return redirect_back()
 
 
@@ -99,7 +101,7 @@ def lock_user(user_id):
 def unlock_user(user_id):
     user = User.query.get_or_404(user_id)
     user.unlock()
-    flash('Lock canceled.', 'info')
+    flash(lazy_gettext('Lock canceled.'), 'info')
     return redirect_back()
 
 
@@ -109,7 +111,7 @@ def delete_tag(tag_id):
     tag = Tag.query.get_or_404(tag_id)
     db.session.delete(tag)
     db.session.commit()
-    flash('Tag deleted.', 'info')
+    flash(lazy_gettext('Tag deleted.'), 'info')
     return redirect_back()
 
 
