@@ -14,9 +14,7 @@ class EditProfileForm(FlaskForm):
     name = StringField(lazy_gettext('Name'), validators=[DataRequired(), Length(1, 30)])
     username = StringField(lazy_gettext('Username'), validators=[DataRequired(), Length(1, 20),
                                                    Regexp('^[a-zA-Z0-9]*$',
-                                                          message='{} a-z, A-Z {} 0-9.'.format(
-                                                              lazy_gettext('The username should contain only'),
-                                                              lazy_gettext('and'))),
+                                                          message=lazy_gettext('The username should contain only a-z, A-Z and 0-9.')),
                                                           is_username_obscene])
     website = StringField(lazy_gettext('Website'), validators=[Optional(), Length(0, 255)])
     location = StringField(lazy_gettext('City'), validators=[Optional(), Length(0, 50)])

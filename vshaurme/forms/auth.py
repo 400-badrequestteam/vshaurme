@@ -21,9 +21,7 @@ class RegisterForm(FlaskForm):
     email = StringField(lazy_gettext('Email'), validators=[DataRequired(), Length(1, 254), Email()])
     username = StringField(lazy_gettext('Username'), validators=[DataRequired(), is_username_obscene, Length(1, 20),
                                                    Regexp('^[a-zA-Z0-9]*$',
-                                                          message='{} a-z, A-Z {} 0-9.'.format(
-                                                              lazy_gettext('The username should contain only'),
-                                                              lazy_gettext('and'))),
+                                                          message=lazy_gettext('The username should contain only a-z, A-Z and 0-9.')),
                                                           ])
     password = PasswordField(lazy_gettext('Password'), validators=[
         DataRequired(), is_password_valid, EqualTo('password2')])

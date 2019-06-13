@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-06-13 09:20+0300\n"
+"POT-Creation-Date: 2019-06-13 09:36+0300\n"
 "PO-Revision-Date: 2019-06-11 14:26+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -235,8 +235,8 @@ msgstr "Настройки конфиденциальности обновлен
 msgid "Your are free, goodbye!"
 msgstr "Вы свободны, до свидания!"
 
-#: forms/admin.py:11 forms/auth.py:13 forms/auth.py:21 forms/auth.py:43
-#: forms/auth.py:48 templates/admin/manage_user.html:101
+#: forms/admin.py:11 forms/auth.py:13 forms/auth.py:21 forms/auth.py:41
+#: forms/auth.py:46 templates/admin/manage_user.html:101
 #: templates/user/_header.html:56
 msgid "Email"
 msgstr "Электронная почта"
@@ -253,19 +253,19 @@ msgstr "Активный"
 msgid "Confirmed"
 msgstr "Подтвержден"
 
-#: forms/admin.py:15 forms/user.py:24 forms/user.py:70 forms/user.py:75
+#: forms/admin.py:15 forms/user.py:22 forms/user.py:68 forms/user.py:73
 msgid "Apply"
 msgstr "Применить"
 
-#: forms/admin.py:25 forms/auth.py:39 forms/user.py:28
+#: forms/admin.py:25 forms/auth.py:37 forms/user.py:26
 msgid "The username is already in use."
 msgstr "Имя пользователя уже используется."
 
-#: forms/admin.py:29 forms/auth.py:35 forms/user.py:55
+#: forms/admin.py:29 forms/auth.py:33 forms/user.py:53
 msgid "The email is already in use."
 msgstr "Элетронная почта уже используется."
 
-#: forms/auth.py:14 forms/auth.py:28 forms/auth.py:49
+#: forms/auth.py:14 forms/auth.py:26 forms/auth.py:47
 msgid "Password"
 msgstr "Пароль"
 
@@ -273,7 +273,7 @@ msgstr "Пароль"
 msgid "Remember me"
 msgstr "Запомнить меня"
 
-#: forms/auth.py:16 forms/auth.py:31
+#: forms/auth.py:16 forms/auth.py:29
 msgid "Log in"
 msgstr "Вход"
 
@@ -281,27 +281,23 @@ msgstr "Вход"
 msgid "Name"
 msgstr "Имя"
 
-#: forms/auth.py:22 forms/user.py:15 forms/user.py:79
+#: forms/auth.py:22 forms/user.py:15 forms/user.py:77
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: forms/auth.py:25 forms/user.py:18
-msgid "The username should contain only"
-msgstr "Имя пользователя должно содержать только"
+#: forms/auth.py:24 forms/user.py:17
+msgid "The username should contain only a-z, A-Z and 0-9."
+msgstr "Имя пользователя должно содержать только символы a-z, A-Z и 0-9."
 
-#: forms/auth.py:26 forms/user.py:19
-msgid "and"
-msgstr "и"
-
-#: forms/auth.py:30 forms/auth.py:51
+#: forms/auth.py:28 forms/auth.py:49
 msgid "Confirm password"
 msgstr "Подтвердить пароль"
 
-#: forms/auth.py:44
+#: forms/auth.py:42
 msgid "Remind"
 msgstr "Напомнить"
 
-#: forms/auth.py:52
+#: forms/auth.py:50
 msgid "Reset"
 msgstr "Сброс"
 
@@ -317,80 +313,80 @@ msgstr "Добавить"
 msgid "Add Tag (use space to separate)"
 msgstr "Добавить тэг (используйте пробел для разделения)"
 
-#: forms/user.py:21
+#: forms/user.py:19
 msgid "Website"
 msgstr "Вебсайт"
 
-#: forms/user.py:22 templates/admin/manage_user.html:51
+#: forms/user.py:20 templates/admin/manage_user.html:51
 msgid "City"
 msgstr "Город"
 
-#: forms/user.py:23 templates/admin/manage_user.html:50
+#: forms/user.py:21 templates/admin/manage_user.html:50
 msgid "Bio"
 msgstr "О себе"
 
-#: forms/user.py:32 forms/user.py:38 templates/base.html:51
+#: forms/user.py:30 forms/user.py:36 templates/base.html:51
 #: templates/main/upload.html:3 templates/main/upload.html:13
 #: templates/user/index.html:19
 msgid "Upload"
 msgstr "Загрузить"
 
-#: forms/user.py:35
+#: forms/user.py:33
 msgid "The file format should be"
 msgstr "Формат файла должен быть"
 
-#: forms/user.py:36
+#: forms/user.py:34
 msgid "or"
 msgstr "или"
 
-#: forms/user.py:46
+#: forms/user.py:44
 msgid "Crop and Update"
 msgstr "Обрезать и Обновить"
 
-#: forms/user.py:50
+#: forms/user.py:48
 msgid "New Email"
 msgstr "Новый email-адрес"
 
-#: forms/user.py:51 forms/user.py:63 templates/main/explore.html:16
+#: forms/user.py:49 forms/user.py:61 templates/main/explore.html:16
 msgid "Change"
 msgstr "Обновить"
 
-#: forms/user.py:59
+#: forms/user.py:57
 msgid "Old Password"
 msgstr "Старый пароль"
 
-#: forms/user.py:60
+#: forms/user.py:58
 msgid "New Password"
 msgstr "Новый пароль"
 
-#: forms/user.py:62
+#: forms/user.py:60
 msgid "Confirm Password"
 msgstr "Подтвердить пароль"
 
-#: forms/user.py:67
+#: forms/user.py:65
 msgid "New comment"
 msgstr "Новый комментарий"
 
-#: forms/user.py:68
+#: forms/user.py:66
 msgid "New follower"
 msgstr "Новый подписчик"
 
-#: forms/user.py:69
+#: forms/user.py:67
 msgid "New collector"
 msgstr "Новый коллекционер"
 
-#: forms/user.py:74
+#: forms/user.py:72
 msgid "Public my collection"
 msgstr "Опубликовать мою коллекцию"
 
-#: forms/user.py:80 templates/admin/manage_comment.html:59
+#: forms/user.py:78 templates/admin/manage_comment.html:59
 #: templates/admin/manage_photo.html:77 templates/admin/manage_tag.html:37
 #: templates/main/_comment.html:59 templates/main/photo.html:18
 #: templates/main/photo.html:70 templates/main/tag.html:15
 msgid "Delete"
 msgstr "Удалить"
 
-#: forms/user.py:84
+#: forms/user.py:82
 msgid "Wrong username."
 msgstr "Неправильное имя пользователя."
 
@@ -1097,4 +1093,10 @@ msgstr ""
 #: vshaurme_validators/validate_username_for_obscene.py:36
 msgid "You should not use obscenic words! Please do not be so!"
 msgstr "Вы не должны использовать нецензурные слова! Пожалуйста, не надо так!"
+
+#~ msgid "The username should contain only"
+#~ msgstr "Имя пользователя должно содержать только"
+
+#~ msgid "and"
+#~ msgstr "и"
 
