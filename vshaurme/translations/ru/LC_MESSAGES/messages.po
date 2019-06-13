@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-06-12 23:25+0300\n"
+"POT-Creation-Date: 2019-06-13 09:20+0300\n"
 "PO-Revision-Date: 2019-06-11 14:26+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -39,31 +39,31 @@ msgstr "Ошибка в"
 msgid "field"
 msgstr "поле"
 
-#: blueprints/admin.py:52 blueprints/user.py:108
+#: blueprints/admin.py:53 blueprints/user.py:108
 msgid "Profile updated."
 msgstr "Профиль обновлен"
 
-#: blueprints/admin.py:71 blueprints/admin.py:92
+#: blueprints/admin.py:73 blueprints/admin.py:96
 msgid "Permission denied."
 msgstr "Доступ запрещен."
 
-#: blueprints/admin.py:74
+#: blueprints/admin.py:76
 msgid "Account blocked."
 msgstr "Аккаунт заблокирован."
 
-#: blueprints/admin.py:83
+#: blueprints/admin.py:86
 msgid "Block canceled."
 msgstr "Блокирование отменено."
 
-#: blueprints/admin.py:95
+#: blueprints/admin.py:99
 msgid "Account locked."
 msgstr "Аккаунт блокирован."
 
-#: blueprints/admin.py:104
+#: blueprints/admin.py:109
 msgid "Lock canceled."
 msgstr "Блокировка отменена."
 
-#: blueprints/admin.py:114 blueprints/main.py:394
+#: blueprints/admin.py:120 blueprints/main.py:394
 msgid "Tag deleted."
 msgstr "Тэг удален."
 
@@ -235,8 +235,8 @@ msgstr "Настройки конфиденциальности обновлен
 msgid "Your are free, goodbye!"
 msgstr "Вы свободны, до свидания!"
 
-#: forms/admin.py:11 forms/auth.py:13 forms/auth.py:21 forms/auth.py:41
-#: forms/auth.py:46 templates/admin/manage_user.html:101
+#: forms/admin.py:11 forms/auth.py:13 forms/auth.py:21 forms/auth.py:43
+#: forms/auth.py:48 templates/admin/manage_user.html:101
 #: templates/user/_header.html:56
 msgid "Email"
 msgstr "Электронная почта"
@@ -257,15 +257,15 @@ msgstr "Подтвержден"
 msgid "Apply"
 msgstr "Применить"
 
-#: forms/admin.py:25 forms/auth.py:37 forms/user.py:28
+#: forms/admin.py:25 forms/auth.py:39 forms/user.py:28
 msgid "The username is already in use."
 msgstr "Имя пользователя уже используется."
 
-#: forms/admin.py:29 forms/auth.py:33 forms/user.py:55
+#: forms/admin.py:29 forms/auth.py:35 forms/user.py:55
 msgid "The email is already in use."
 msgstr "Элетронная почта уже используется."
 
-#: forms/auth.py:14 forms/auth.py:26 forms/auth.py:47
+#: forms/auth.py:14 forms/auth.py:28 forms/auth.py:49
 msgid "Password"
 msgstr "Пароль"
 
@@ -273,7 +273,7 @@ msgstr "Пароль"
 msgid "Remember me"
 msgstr "Запомнить меня"
 
-#: forms/auth.py:16 forms/auth.py:29
+#: forms/auth.py:16 forms/auth.py:31
 msgid "Log in"
 msgstr "Вход"
 
@@ -285,15 +285,23 @@ msgstr "Имя"
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: forms/auth.py:28 forms/auth.py:49
+#: forms/auth.py:25 forms/user.py:18
+msgid "The username should contain only"
+msgstr "Имя пользователя должно содержать только"
+
+#: forms/auth.py:26 forms/user.py:19
+msgid "and"
+msgstr "и"
+
+#: forms/auth.py:30 forms/auth.py:51
 msgid "Confirm password"
 msgstr "Подтвердить пароль"
 
-#: forms/auth.py:42
+#: forms/auth.py:44
 msgid "Remind"
 msgstr "Напомнить"
 
-#: forms/auth.py:50
+#: forms/auth.py:52
 msgid "Reset"
 msgstr "Сброс"
 
@@ -308,14 +316,6 @@ msgstr "Добавить"
 #: forms/main.py:13
 msgid "Add Tag (use space to separate)"
 msgstr "Добавить тэг (используйте пробел для разделения)"
-
-#: forms/user.py:18
-msgid "The username should contain only"
-msgstr "Имя пользователя должно содержать только"
-
-#: forms/user.py:19
-msgid "and"
-msgstr "и"
 
 #: forms/user.py:21
 msgid "Website"
@@ -556,12 +556,10 @@ msgstr "Управление комментарием"
 msgid "Order by"
 msgstr "Отображать по"
 
-
 #: templates/admin/manage_comment.html:23 templates/admin/manage_photo.html:23
 #: templates/main/tag.html:25
 msgid "Order by Time"
 msgstr "Отображать по Времени"
-
 
 #: templates/admin/manage_comment.html:25 templates/admin/manage_photo.html:25
 msgid "Order by Flag"
