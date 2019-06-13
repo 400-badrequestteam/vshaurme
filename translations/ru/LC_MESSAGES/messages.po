@@ -33,7 +33,7 @@ msgstr "Повторно отправить подтверждение"
 
 #: vshaurme/emails.py:22
 msgid "Email Confirm"
-msgstr "Электронный адрес подтвержден"
+msgstr "Подтверждение электронного адреса"
 
 #: vshaurme/emails.py:26 vshaurme/templates/auth/reset_password.html:4
 #: vshaurme/templates/auth/reset_password.html:8
