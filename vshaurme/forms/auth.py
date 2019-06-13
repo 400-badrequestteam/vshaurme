@@ -26,7 +26,7 @@ class RegisterForm(FlaskForm):
     password = PasswordField(lazy_gettext('Password'), validators=[
         DataRequired(), is_password_valid, EqualTo('password2')])
     password2 = PasswordField(lazy_gettext('Confirm password'), validators=[DataRequired()])
-    submit = SubmitField(lazy_gettext('Log in'))
+    submit = SubmitField(lazy_gettext('Register'))
 
     def validate_email(self, field):
         if User.query.filter_by(email=field.data.lower()).first():

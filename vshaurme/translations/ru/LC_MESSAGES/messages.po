@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-06-13 09:36+0300\n"
+"POT-Creation-Date: 2019-06-13 09:45+0300\n"
 "PO-Revision-Date: 2019-06-11 14:26+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -273,7 +273,7 @@ msgstr "Пароль"
 msgid "Remember me"
 msgstr "Запомнить меня"
 
-#: forms/auth.py:16 forms/auth.py:29
+#: forms/auth.py:16
 msgid "Log in"
 msgstr "Вход"
 
@@ -292,6 +292,11 @@ msgstr "Имя пользователя должно содержать толь
 #: forms/auth.py:28 forms/auth.py:49
 msgid "Confirm password"
 msgstr "Подтвердить пароль"
+
+#: forms/auth.py:29 templates/auth/register.html:4
+#: templates/main/_comment.html:123
+msgid "Register"
+msgstr "Регистрация"
 
 #: forms/auth.py:42
 msgid "Remind"
@@ -708,10 +713,6 @@ msgstr "Зарегистрировать новый аккаунт"
 #: templates/auth/login.html:19
 msgid "Forget password"
 msgstr "Забыли пароль"
-
-#: templates/auth/register.html:4 templates/main/_comment.html:123
-msgid "Register"
-msgstr "Регистрация"
 
 #: templates/auth/register.html:14
 msgid "Welcome to Vshaurme!"
