@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-06-13 22:56+0300\n"
+"POT-Creation-Date: 2019-06-13 23:11+0300\n"
 "PO-Revision-Date: 2019-06-11 14:26+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -536,10 +536,33 @@ msgid "Follows you"
 msgstr "Ваши подписчики"
 
 #: vshaurme/templates/admin/edit_profile.html:5
+#: vshaurme/templates/admin/edit_profile.html:16
 #: vshaurme/templates/admin/manage_user.html:104
 #: vshaurme/templates/user/_header.html:60
 #: vshaurme/templates/user/_header.html:66
 msgid "Edit profile"
+msgstr "Редактировать профиль"
+
+#: vshaurme/templates/admin/edit_profile.html:10
+#: vshaurme/templates/admin/index.html:61
+#: vshaurme/templates/admin/manage_comment.html:9
+#: vshaurme/templates/admin/manage_photo.html:9
+#: vshaurme/templates/admin/manage_tag.html:9
+#: vshaurme/templates/admin/manage_user.html:9
+msgid "Dashboard Home"
+msgstr "Панель управления Домашняя"
+
+#: vshaurme/templates/admin/edit_profile.html:11
+#: vshaurme/templates/admin/manage_user.html:10
+msgid "Manage User"
+msgstr "Управление пользователем"
+
+#: vshaurme/templates/admin/edit_profile.html:12
+#: vshaurme/templates/admin/edit_profile.html:22
+#: vshaurme/templates/user/settings/base.html:13
+#: vshaurme/templates/user/settings/edit_profile.html:4
+#: vshaurme/templates/user/settings/edit_profile.html:8
+msgid "Edit Profile"
 msgstr "Редактировать профиль"
 
 #: vshaurme/templates/admin/edit_profile.html:17
@@ -550,13 +573,6 @@ msgstr "Возврат"
 #: vshaurme/templates/admin/edit_profile.html:18
 msgid "'s homepage"
 msgstr "домашняя страница"
-
-#: vshaurme/templates/admin/edit_profile.html:22
-#: vshaurme/templates/user/settings/base.html:13
-#: vshaurme/templates/user/settings/edit_profile.html:4
-#: vshaurme/templates/user/settings/edit_profile.html:8
-msgid "Edit Profile"
-msgstr "Редактировать профиль"
 
 #: vshaurme/templates/admin/index.html:10
 msgid "Vshaurme Dashboard"
@@ -601,14 +617,6 @@ msgstr "Тэги"
 #: vshaurme/templates/main/_comment.html:2
 msgid "Comments"
 msgstr "Комментарии"
-
-#: vshaurme/templates/admin/index.html:61
-#: vshaurme/templates/admin/manage_comment.html:9
-#: vshaurme/templates/admin/manage_photo.html:9
-#: vshaurme/templates/admin/manage_tag.html:9
-#: vshaurme/templates/admin/manage_user.html:9
-msgid "Dashboard Home"
-msgstr "Панель управления Домашняя"
 
 #: vshaurme/templates/admin/index.html:69
 #: vshaurme/templates/admin/index.html:79
@@ -767,10 +775,6 @@ msgstr "Нет тэгов."
 #: vshaurme/templates/admin/manage_user.html:4
 msgid "Manage Users"
 msgstr "Управление пользователями"
-
-#: vshaurme/templates/admin/manage_user.html:10
-msgid "Manage User"
-msgstr "Управление пользователем"
 
 #: vshaurme/templates/admin/manage_user.html:19
 msgid "Filter"
@@ -1217,10 +1221,4 @@ msgstr ""
 #: vshaurme/vshaurme_validators/validate_username_for_obscene.py:36
 msgid "You should not use obscenic words! Please do not be so!"
 msgstr "Вы не должны использовать нецензурные слова! Пожалуйста, не надо так!"
-
-#~ msgid "The username should contain only"
-#~ msgstr "Имя пользователя должно содержать только"
-
-#~ msgid "and"
-#~ msgstr "и"
 
