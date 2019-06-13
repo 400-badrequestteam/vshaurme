@@ -1,19 +1,19 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, Optional, Length
-from flask_babel import lazy_gettext
+from flask_babel import lazy_gettext as _l
 
 
 class DescriptionForm(FlaskForm):
-    description = TextAreaField(lazy_gettext('Description'), validators=[Optional(), Length(0, 500)])
-    submit = SubmitField(lazy_gettext('Add'))
+    description = TextAreaField(_l('Description'), validators=[Optional(), Length(0, 500)])
+    submit = SubmitField(_l('Add'))
 
 
 class TagForm(FlaskForm):
-    tag = StringField(lazy_gettext('Add Tag (use space to separate)'), validators=[Optional(), Length(0, 64)])
-    submit = SubmitField(lazy_gettext('Add'))
+    tag = StringField(_l('Add Tag (use space to separate)'), validators=[Optional(), Length(0, 64)])
+    submit = SubmitField(_l('Add'))
 
 
 class CommentForm(FlaskForm):
     body = TextAreaField('', validators=[DataRequired()])
-    submit = SubmitField(lazy_gettext('Add'))
+    submit = SubmitField(_l('Add'))

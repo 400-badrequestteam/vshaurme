@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-06-13 09:45+0300\n"
+"POT-Creation-Date: 2019-06-13 22:29+0300\n"
 "PO-Revision-Date: 2019-06-11 14:26+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -30,6 +30,43 @@ msgstr "Не получили письмо?"
 #: decorators.py:17
 msgid "Resend Confirm Email"
 msgstr "Повторно отправить подтверждение"
+
+#: emails.py:22
+msgid "Email Confirm"
+msgstr "Электронный адрес подтвержден"
+
+#: emails.py:26 templates/auth/reset_password.html:4
+#: templates/auth/reset_password.html:8
+msgid "Password Reset"
+msgstr "Сброс пароля"
+
+#: emails.py:30
+msgid "Change Email Confirm"
+msgstr "Изменить подтверждение элетронного адреса"
+
+#: notifications.py:9 notifications.py:28 templates/main/search.html:17
+msgid "User"
+msgstr "Пользователь"
+
+#: notifications.py:12
+msgid "followed you"
+msgstr "подписан на вас"
+
+#: notifications.py:20
+msgid "This photo"
+msgstr "У этого фото"
+
+#: notifications.py:21
+msgid "has new comment/reply."
+msgstr "новый комментарий/ответ"
+
+#: notifications.py:31
+msgid "collected your"
+msgstr "сохранил ваше"
+
+#: notifications.py:33
+msgid "photo"
+msgstr "фото"
 
 #: utils.py:98
 msgid "Error in the"
@@ -66,6 +103,51 @@ msgstr "Блокировка отменена."
 #: blueprints/admin.py:120 blueprints/main.py:394
 msgid "Tag deleted."
 msgstr "Тэг удален."
+
+#: blueprints/ajax.py:14 blueprints/ajax.py:43 blueprints/ajax.py:62
+#: blueprints/ajax.py:75 blueprints/ajax.py:94
+msgid "Login required."
+msgstr "Требуется авторизация"
+
+#: blueprints/ajax.py:45 blueprints/ajax.py:77
+msgid "Confirm account required."
+msgstr "требуется подтверждение аккаунта"
+
+#: blueprints/ajax.py:47 blueprints/ajax.py:79 templates/main/_comment.html:116
+msgid "No permission."
+msgstr "Нет прав."
+
+#: blueprints/ajax.py:51 blueprints/main.py:180
+msgid "Already collected."
+msgstr "Уже в избранном."
+
+#: blueprints/ajax.py:56 blueprints/main.py:184
+msgid "Photo collected."
+msgstr "Фото добавлено в избранное."
+
+#: blueprints/ajax.py:66 blueprints/main.py:195
+msgid "Not collect yet."
+msgstr "Еще не добавлено в избранное."
+
+#: blueprints/ajax.py:69
+msgid "Collect canceled."
+msgstr "Сохранение отменено."
+
+#: blueprints/ajax.py:83 blueprints/user.py:54
+msgid "Already followed."
+msgstr "Уже подписан."
+
+#: blueprints/ajax.py:88 blueprints/user.py:58
+msgid "User followed."
+msgstr "Пользователь подписан."
+
+#: blueprints/ajax.py:98 blueprints/user.py:69
+msgid "Not follow yet."
+msgstr "Еще не подписан."
+
+#: blueprints/ajax.py:101
+msgid "Follow canceled."
+msgstr "Подписка отменена"
 
 #: blueprints/auth.py:25
 msgid "Login success."
@@ -135,18 +217,6 @@ msgstr "Это уже последний."
 msgid "This is already the first one."
 msgstr "Это уже первый."
 
-#: blueprints/main.py:180
-msgid "Already collected."
-msgstr "Уже в избранном."
-
-#: blueprints/main.py:184
-msgid "Photo collected."
-msgstr "Фото добавлено в избранное."
-
-#: blueprints/main.py:195
-msgid "Not collect yet."
-msgstr "Еще не добавлено в избранное."
-
 #: blueprints/main.py:199
 msgid "Photo uncollected."
 msgstr "Фото удалено из избранного."
@@ -190,18 +260,6 @@ msgstr "Комментарий удален."
 #: blueprints/user.py:25
 msgid "Your account is locked."
 msgstr "Ваш аккаунт заблокирован."
-
-#: blueprints/user.py:54
-msgid "Already followed."
-msgstr "Уже подписан."
-
-#: blueprints/user.py:58
-msgid "User followed."
-msgstr "Пользователь подписан."
-
-#: blueprints/user.py:69
-msgid "Not follow yet."
-msgstr "Еще не подписан."
 
 #: blueprints/user.py:73
 msgid "User unfollowed."
@@ -306,7 +364,7 @@ msgstr "Напомнить"
 msgid "Reset"
 msgstr "Сброс"
 
-#: forms/main.py:8 templates/admin/manage_photo.html:36
+#: forms/main.py:8 templates/admin/manage_photo.html:40
 msgid "Description"
 msgstr "Описание"
 
@@ -384,8 +442,8 @@ msgstr "Новый коллекционер"
 msgid "Public my collection"
 msgstr "Опубликовать мою коллекцию"
 
-#: forms/user.py:78 templates/admin/manage_comment.html:59
-#: templates/admin/manage_photo.html:77 templates/admin/manage_tag.html:37
+#: forms/user.py:78 templates/admin/manage_comment.html:63
+#: templates/admin/manage_photo.html:81 templates/admin/manage_tag.html:37
 #: templates/main/_comment.html:59 templates/main/photo.html:18
 #: templates/main/photo.html:70 templates/main/tag.html:15
 msgid "Delete"
@@ -493,8 +551,8 @@ msgid "Manage"
 msgstr "Управление"
 
 #: templates/admin/index.html:25 templates/admin/index.html:67
-#: templates/admin/manage_tag.html:24 templates/admin/manage_user.html:53
-#: templates/main/profile_popup.html:19
+#: templates/admin/manage_photo.html:14 templates/admin/manage_tag.html:24
+#: templates/admin/manage_user.html:53 templates/main/profile_popup.html:19
 msgid "Photos"
 msgstr "Фотографии"
 
@@ -511,7 +569,7 @@ msgstr "Тэги"
 #: templates/admin/index.html:28 templates/admin/index.html:92
 #: templates/admin/manage_comment.html:14 templates/main/_comment.html:2
 msgid "Comments"
-msgstr "Комментариев"
+msgstr "Комментарии"
 
 #: templates/admin/index.html:61 templates/admin/manage_comment.html:9
 #: templates/admin/manage_photo.html:9 templates/admin/manage_tag.html:9
@@ -550,63 +608,72 @@ msgstr "Управление комментариями"
 
 #: templates/admin/manage_comment.html:10
 msgid "Manage Comment"
-msgstr "Управление комментарием"
+msgstr "Управление комментариями"
 
-#: templates/admin/manage_comment.html:19 templates/admin/manage_photo.html:19
-#: templates/main/tag.html:21
+#: templates/admin/manage_comment.html:20
+#: templates/admin/manage_comment.html:22 templates/admin/manage_photo.html:20
+#: templates/admin/manage_photo.html:22 templates/main/tag.html:21
 msgid "Order by"
-msgstr "Отображать по"
+msgstr "Отображение по"
 
-#: templates/admin/manage_comment.html:23 templates/admin/manage_photo.html:23
+#: templates/admin/manage_comment.html:20 templates/admin/manage_photo.html:20
+msgid "flag"
+msgstr "флагу"
+
+#: templates/admin/manage_comment.html:22 templates/admin/manage_photo.html:22
+msgid "time"
+msgstr "времени"
+
+#: templates/admin/manage_comment.html:27 templates/admin/manage_photo.html:27
 #: templates/main/tag.html:25
 msgid "Order by Time"
 msgstr "Отображать по Времени"
 
-#: templates/admin/manage_comment.html:25 templates/admin/manage_photo.html:25
+#: templates/admin/manage_comment.html:29 templates/admin/manage_photo.html:29
 msgid "Order by Flag"
 msgstr "Отображать по Флагу"
 
-#: templates/admin/manage_comment.html:35
+#: templates/admin/manage_comment.html:39
 msgid "Body"
 msgstr "Тело"
 
-#: templates/admin/manage_comment.html:36 templates/admin/manage_photo.html:38
+#: templates/admin/manage_comment.html:40 templates/admin/manage_photo.html:42
 #: templates/main/_comment.html:34
 msgid "Author"
 msgstr "Автор"
 
-#: templates/admin/manage_comment.html:37 templates/admin/manage_photo.html:35
+#: templates/admin/manage_comment.html:41 templates/admin/manage_photo.html:39
 msgid "Image"
 msgstr "Изоображение"
 
-#: templates/admin/manage_comment.html:38 templates/admin/manage_photo.html:39
+#: templates/admin/manage_comment.html:42 templates/admin/manage_photo.html:43
 msgid "Reported"
-msgstr "опубликовано"
+msgstr "Опубликовано"
 
-#: templates/admin/manage_comment.html:39 templates/admin/manage_photo.html:40
+#: templates/admin/manage_comment.html:43 templates/admin/manage_photo.html:44
 #: templates/admin/manage_user.html:52
 msgid "Date"
 msgstr "Дата"
 
-#: templates/admin/manage_comment.html:40 templates/admin/manage_photo.html:41
+#: templates/admin/manage_comment.html:44 templates/admin/manage_photo.html:45
 #: templates/admin/manage_tag.html:25 templates/admin/manage_user.html:54
 msgid "Actions"
 msgstr "Действия"
 
-#: templates/admin/manage_comment.html:50 templates/main/search.html:15
+#: templates/admin/manage_comment.html:54 templates/main/search.html:15
 #: templates/user/_header.html:74
 msgid "Photo"
 msgstr "Фото"
 
-#: templates/admin/manage_comment.html:59 templates/admin/manage_photo.html:59
-#: templates/admin/manage_photo.html:77 templates/admin/manage_tag.html:36
+#: templates/admin/manage_comment.html:63 templates/admin/manage_photo.html:63
+#: templates/admin/manage_photo.html:81 templates/admin/manage_tag.html:36
 #: templates/admin/manage_user.html:74 templates/admin/manage_user.html:81
 #: templates/admin/manage_user.html:89 templates/admin/manage_user.html:96
 #: templates/main/tag.html:14
 msgid "Are you sure?"
 msgstr "Вы уверены?"
 
-#: templates/admin/manage_comment.html:68 templates/main/_comment.html:91
+#: templates/admin/manage_comment.html:72 templates/main/_comment.html:91
 msgid "No comments."
 msgstr "Нет комментариев."
 
@@ -618,11 +685,11 @@ msgstr "Управление фотографиями"
 msgid "Manage Photo"
 msgstr "Управление фотографией"
 
-#: templates/admin/manage_photo.html:37 templates/main/search.html:19
+#: templates/admin/manage_photo.html:41 templates/main/search.html:19
 msgid "Tag"
 msgstr "Тэг"
 
-#: templates/admin/manage_photo.html:86 templates/user/index.html:17
+#: templates/admin/manage_photo.html:90 templates/user/index.html:17
 msgid "No photos."
 msgstr "Нет фотографий."
 
@@ -725,10 +792,6 @@ msgstr "Уже есть аккаунт?"
 #: templates/auth/register.html:18
 msgid "Click here to log in."
 msgstr "Нажмите сюда для входа."
-
-#: templates/auth/reset_password.html:4 templates/auth/reset_password.html:8
-msgid "Password Reset"
-msgstr "Сброс пароля"
 
 #: templates/emails/change_email.html:1 templates/emails/confirm.html:1
 #: templates/emails/reset_password.html:1
@@ -840,10 +903,6 @@ msgstr "Ответить "
 #: templates/main/_photo_sidebar.html:75 templates/main/photo.html:69
 msgid "Cancel"
 msgstr "Отмена"
-
-#: templates/main/_comment.html:116
-msgid "No permission."
-msgstr "Нет прав."
 
 #: templates/main/_comment.html:123
 msgid "to leave a comment."
@@ -971,10 +1030,6 @@ msgstr "Домашняя страница"
 msgid "Search:"
 msgstr "Поиск:"
 
-#: templates/main/search.html:17
-msgid "User"
-msgstr "Пользователь"
-
 #: templates/main/search.html:24
 msgid "results"
 msgstr "результаты"
@@ -1051,7 +1106,7 @@ msgstr "Изменить Пароль"
 #: templates/user/settings/change_email.html:4
 #: templates/user/settings/change_email.html:8
 msgid "Change Email"
-msgstr "Изменить Электонную почту"
+msgstr "Изменить Электронную почту"
 
 #: templates/user/settings/base.html:17
 msgid "Notification"
@@ -1065,7 +1120,7 @@ msgstr "Конфиденциальность"
 #: templates/user/settings/delete_account.html:4
 #: templates/user/settings/delete_account.html:8
 msgid "Delete Account"
-msgstr "Удалить аккаутн"
+msgstr "Удалить аккаунт"
 
 #: templates/user/settings/change_avatar.html:16
 msgid ""

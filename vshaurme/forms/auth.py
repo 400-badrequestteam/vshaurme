@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from flask_babel import lazy_gettext
+from flask_babel import lazy_gettext as _l
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms import ValidationError
 from wtforms.validators import DataRequired, Length, Email, EqualTo, Regexp
@@ -10,41 +10,41 @@ from vshaurme.models import User
 
 
 class LoginForm(FlaskForm):
-    email = StringField(lazy_gettext('Email'), validators=[DataRequired(), Length(1, 254), Email()])
-    password = PasswordField(lazy_gettext('Password'), validators=[DataRequired()])
-    remember_me = BooleanField(lazy_gettext('Remember me'))
-    submit = SubmitField(lazy_gettext('Log in'))
+    email = StringField(_l('Email'), validators=[DataRequired(), Length(1, 254), Email()])
+    password = PasswordField(_l('Password'), validators=[DataRequired()])
+    remember_me = BooleanField(_l('Remember me'))
+    submit = SubmitField(_l('Log in'))
 
 
 class RegisterForm(FlaskForm):
-    name = StringField(lazy_gettext('Name'), validators=[DataRequired(), Length(1, 30)])
-    email = StringField(lazy_gettext('Email'), validators=[DataRequired(), Length(1, 254), Email()])
-    username = StringField(lazy_gettext('Username'), validators=[DataRequired(), is_username_obscene, Length(1, 20),
+    name = StringField(_l('Name'), validators=[DataRequired(), Length(1, 30)])
+    email = StringField(_l('Email'), validators=[DataRequired(), Length(1, 254), Email()])
+    username = StringField(_l('Username'), validators=[DataRequired(), is_username_obscene, Length(1, 20),
                                                    Regexp('^[a-zA-Z0-9]*$',
-                                                          message=lazy_gettext('The username should contain only a-z, A-Z and 0-9.')),
+                                                          message=_l('The username should contain only a-z, A-Z and 0-9.')),
                                                           ])
-    password = PasswordField(lazy_gettext('Password'), validators=[
+    password = PasswordField(_l('Password'), validators=[
         DataRequired(), is_password_valid, EqualTo('password2')])
-    password2 = PasswordField(lazy_gettext('Confirm password'), validators=[DataRequired()])
-    submit = SubmitField(lazy_gettext('Register'))
+    password2 = PasswordField(_l('Confirm password'), validators=[DataRequired()])
+    submit = SubmitField(_l('Register'))
 
     def validate_email(self, field):
         if User.query.filter_by(email=field.data.lower()).first():
-            raise ValidationError(lazy_gettext('The email is already in use.'))
+            raise ValidationError(_l('The email is already in use.'))
 
     def validate_username(self, field):
         if User.query.filter_by(username=field.data).first():
-            raise ValidationError(lazy_gettext('The username is already in use.'))
+            raise ValidationError(_l('The username is already in use.'))
 
 
 class ForgetPasswordForm(FlaskForm):
-    email = StringField(lazy_gettext('Email'), validators=[DataRequired(), Length(1, 254), Email()])
-    submit = SubmitField(lazy_gettext('Remind'))
+    email = StringField(_l('Email'), validators=[DataRequired(), Length(1, 254), Email()])
+    submit = SubmitField(_l('Remind'))
 
 
 class ResetPasswordForm(FlaskForm):
-    email = StringField(lazy_gettext('Email'), validators=[DataRequired(), Length(1, 254), Email()])
-    password = PasswordField(lazy_gettext('Password'), validators=[
+    email = StringField(_l('Email'), validators=[DataRequired(), Length(1, 254), Email()])
+    password = PasswordField(_l('Password'), validators=[
         DataRequired(), is_password_valid, EqualTo('password2')])
-    password2 = PasswordField(lazy_gettext('Confirm password'), validators=[DataRequired()])
-    submit = SubmitField(lazy_gettext('Reset'))
+    password2 = PasswordField(_l('Confirm password'), validators=[DataRequired()])
+    submit = SubmitField(_l('Reset'))

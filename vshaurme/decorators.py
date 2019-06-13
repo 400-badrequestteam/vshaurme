@@ -2,7 +2,7 @@ from functools import wraps
 
 from flask import Markup, flash, url_for, redirect, abort
 from flask_login import current_user
-from flask_babel import lazy_gettext
+from flask_babel import lazy_gettext as _l
 
 
 def confirm_required(func):
@@ -11,16 +11,11 @@ def confirm_required(func):
         if not current_user.confirmed:
             message_template = """{}\n{}\n
                                   <a class="alert-link" href="{}">{}</a>""".format(
-                                    lazy_gettext('Please confirm your account first.'),
-                                    lazy_gettext('Not receive the email?'),
+                                    _l('Please confirm your account first.'),
+                                    _l('Not receive the email?'),
                                     url_for('auth.resend_confirm_email'),
-                                    lazy_gettext('Resend Confirm Email')
+                                    _l('Resend Confirm Email')
                                   )
-            # message = Markup(
-            #     'Please confirm your account first.'
-            #     'Not receive the email?'
-            #     '<a class="alert-link" href="%s">Resend Confirm Email</a>' %
-            #     url_for('auth.resend_confirm_email'))
             message = Markup(message_template)
             flash(message, 'warning')
             return redirect(url_for('main.index'))

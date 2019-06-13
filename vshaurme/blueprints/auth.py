@@ -7,7 +7,7 @@ from vshaurme.forms.auth import LoginForm, RegisterForm, ForgetPasswordForm, Res
 from vshaurme.models import User
 from vshaurme.settings import Operations
 from vshaurme.utils import generate_token, validate_token, redirect_back
-from flask_babel import lazy_gettext
+from flask_babel import lazy_gettext as _l
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -22,12 +22,12 @@ def login():
         user = User.query.filter_by(email=form.email.data.lower()).first()
         if user is not None and user.validate_password(form.password.data):
             if login_user(user, form.remember_me.data):
-                flash(lazy_gettext('Login success.'), 'info')
+                flash(_l('Login success.'), 'info')
                 return redirect_back()
             else:
-                flash(lazy_gettext('Your account is blocked.'), 'warning')
+                flash(_l('Your account is blocked.'), 'warning')
                 return redirect(url_for('main.index'))
-        flash(lazy_gettext('Invalid email or password.'), 'warning')
+        flash(_l('Invalid email or password.'), 'warning')
     return render_template('auth/login.html', form=form)
 
 
@@ -48,7 +48,7 @@ def re_authenticate():
 @login_required
 def logout():
     logout_user()
-    flash(lazy_gettext('Logout success.'), 'info')
+    flash(_l('Logout success.'), 'info')
     return redirect(url_for('main.index'))
 
 
@@ -69,7 +69,7 @@ def register():
         db.session.commit()
         token = generate_token(user=user, operation='confirm')
         send_confirm_email(user=user, token=token)
-        flash(lazy_gettext('Confirm email sent, check your inbox.'), 'info')
+        flash(_l('Confirm email sent, check your inbox.'), 'info')
         return redirect(url_for('.login'))
     return render_template('auth/register.html', form=form)
 
@@ -81,10 +81,10 @@ def confirm(token):
         return redirect(url_for('main.index'))
 
     if validate_token(user=current_user, token=token, operation=Operations.CONFIRM):
-        flash(lazy_gettext('Account confirmed.'), 'success')
+        flash(_l('Account confirmed.'), 'success')
         return redirect(url_for('main.index'))
     else:
-        flash(lazy_gettext('Invalid or expired token.'), 'danger')
+        flash(_l('Invalid or expired token.'), 'danger')
         return redirect(url_for('.resend_confirm_email'))
 
 
@@ -96,7 +96,7 @@ def resend_confirm_email():
 
     token = generate_token(user=current_user, operation=Operations.CONFIRM)
     send_confirm_email(user=current_user, token=token)
-    flash(lazy_gettext('New email sent, check your inbox.'), 'info')
+    flash(_l('New email sent, check your inbox.'), 'info')
     return redirect(url_for('main.index'))
 
 
@@ -111,9 +111,9 @@ def forget_password():
         if user:
             token = generate_token(user=user, operation=Operations.RESET_PASSWORD)
             send_reset_password_email(user=user, token=token)
-            flash(lazy_gettext('Password reset email sent, check your inbox.'), 'info')
+            flash(_l('Password reset email sent, check your inbox.'), 'info')
             return redirect(url_for('.login'))
-        flash(lazy_gettext('Invalid email.'), 'warning')
+        flash(_l('Invalid email.'), 'warning')
         return redirect(url_for('.forget_password'))
     return render_template('auth/reset_password.html', form=form)
 
@@ -130,9 +130,9 @@ def reset_password(token):
             return redirect(url_for('main.index'))
         if validate_token(user=user, token=token, operation=Operations.RESET_PASSWORD,
                           new_password=form.password.data):
-            flash(lazy_gettext('Password updated.'), 'success')
+            flash(_l('Password updated.'), 'success')
             return redirect(url_for('.login'))
         else:
-            flash(lazy_gettext('Invalid or expired link.'), 'danger')
+            flash(_l('Invalid or expired link.'), 'danger')
             return redirect(url_for('.forget_password'))
     return render_template('auth/reset_password.html', form=form)

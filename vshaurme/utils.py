@@ -15,7 +15,7 @@ from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from vshaurme.extensions import db
 from vshaurme.models import User
 from vshaurme.settings import Operations
-from flask_babel import lazy_gettext
+from flask_babel import lazy_gettext as _l
 
 
 def generate_token(user, operation, expire_in=None, **kwargs):
@@ -95,9 +95,9 @@ def flash_errors(form):
     for field, errors in form.errors.items():
         for error in errors:
             flash("{} {} {} - {}".format(
-                lazy_gettext("Error in the"),
+                _l("Error in the"),
                 getattr(form, field).label.text,
-                lazy_gettext("field"),
+                _l("field"),
                 error
                 )
             )
