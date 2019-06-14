@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-06-13 23:18+0300\n"
+"POT-Creation-Date: 2019-06-14 16:49+0300\n"
 "PO-Revision-Date: 2019-06-11 14:26+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -101,7 +101,7 @@ msgstr "Аккаунт блокирован."
 msgid "Lock canceled."
 msgstr "Блокировка отменена."
 
-#: vshaurme/blueprints/admin.py:120 vshaurme/blueprints/main.py:394
+#: vshaurme/blueprints/admin.py:120 vshaurme/blueprints/main.py:397
 msgid "Tag deleted."
 msgstr "Тэг удален."
 
@@ -236,27 +236,31 @@ msgstr "Фото отправлено."
 msgid "Description updated."
 msgstr "Описание обновлено."
 
-#: vshaurme/blueprints/main.py:271
+#: vshaurme/blueprints/main.py:270
+msgid "Account confirmation required to add comment."
+msgstr "Требуется подтверждение аккаунта, чтобы добавлять комментарии"
+
+#: vshaurme/blueprints/main.py:274
 msgid "Comment published."
 msgstr "Комментарий опубликован."
 
-#: vshaurme/blueprints/main.py:298
+#: vshaurme/blueprints/main.py:301
 msgid "Tag added."
 msgstr "Тэг добавлен."
 
-#: vshaurme/blueprints/main.py:313
+#: vshaurme/blueprints/main.py:316
 msgid "Comment disabled"
 msgstr "Комментирование запрещено"
 
-#: vshaurme/blueprints/main.py:316
+#: vshaurme/blueprints/main.py:319
 msgid "Comment enabled."
 msgstr "Комментирование разрешено."
 
-#: vshaurme/blueprints/main.py:340
+#: vshaurme/blueprints/main.py:343
 msgid "Photo deleted."
 msgstr "Фото удалено."
 
-#: vshaurme/blueprints/main.py:360
+#: vshaurme/blueprints/main.py:363
 msgid "Comment deleted."
 msgstr "Комментарий удален."
 
