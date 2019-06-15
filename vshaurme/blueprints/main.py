@@ -251,6 +251,7 @@ def edit_description(photo_id):
 
 @main_bp.route('/photo/<int:photo_id>/comment/new', methods=['POST'])
 @login_required
+@confirm_required
 @permission_required('COMMENT')
 def new_comment(photo_id):
     photo = Photo.query.get_or_404(photo_id)
@@ -266,9 +267,6 @@ def new_comment(photo_id):
             comment.replied = Comment.query.get_or_404(replied_id)
             if comment.replied.author.receive_comment_notification:
                 push_comment_notification(photo_id=photo.id, receiver=comment.replied.author)
-        if not author.confirmed:
-            flash(_l('Account confirmation required to add comment.'), 'warning')
-            return redirect(url_for('.show_photo', photo_id=photo_id, page=page))
         db.session.add(comment)
         db.session.commit()
         flash(_l('Comment published.'), 'success')
