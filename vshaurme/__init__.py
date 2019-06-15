@@ -14,6 +14,8 @@ from vshaurme.extensions import bootstrap, db, login_manager, mail, dropzone, mo
 from vshaurme.models import Role, User, Photo, Tag, Follow, Notification, Comment, Collect, Permission
 from vshaurme.settings import config
 
+import csv
+
 
 def create_app(config_name=None):
     if config_name is None:
@@ -152,3 +154,15 @@ def register_commands(app):
         click.echo('Generating %d comments...' % comment)
         fake_comment(comment)
         click.echo('Done.')
+
+    @app.cli.command()
+    @click.option('--path')
+    def emails(path):
+        users = User.query.filter_by(active=True).all()
+
+        with open(path, "w", newline='') as csv_file:
+            writer = csv.writer(csv_file, delimiter=';')
+            writer.writerow(["name", "email"])
+            for user in users:
+                writer.writerow([user.name, user.email])
+            click.echo('Done.')
