@@ -1,6 +1,7 @@
 from vshaurme import create_app
 from vshaurme.extensions import db
 
+
 app = create_app()
 
 ###################################################### rollback initiation begin
@@ -29,6 +30,7 @@ def init_rollbar():
     got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
 
 ###################################################### rollback initiation end
+
 
 db.create_all(app=app)
 
